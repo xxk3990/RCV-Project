@@ -128,9 +128,9 @@ function button14F () {
 }
 
 function showList() {
-    let list = "<ul>"
+    let list = "<ul class = candidate-list>"
     for (let i = 0; i <itemList.length; i++) {
-        list += "<li>" + itemList[i] + "<span class='close' id=" + i + ">" + "&times;" + "</span></li>";
+        list += `<li class = 'candidate-li'><span class = 'candidate-name'>${itemList[i]}</span><span class='close' id='${i}'>&times;</span></li>`;
     }
     list += "</ul>";
     document.querySelector(".candiateList").innerHTML = list;
