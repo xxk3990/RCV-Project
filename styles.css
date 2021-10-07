@@ -1,3 +1,14 @@
 .title {
     text-align: center;
 }
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+body {
+    background-color: #13268b;
+    background-image: url("images/texture.png");
+}
