@@ -1,3 +1,16 @@
 .title {
     text-align: center;
 }
+.candiateList {
+    display: inline-block;
+}
+
+.candiateButton {
+    width: 500px;
+    float: left;
+    padding: 10px;
+}
+
+.result {
+    float: right;
+}
