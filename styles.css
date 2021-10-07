@@ -5,12 +5,30 @@
     display: inline-block;
 }
 
-.candiateButton {
+.candiateButtons {
     width: 500px;
     float: left;
     padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-row-gap: 24px;
+    grid-column-gap: 40px;
+    font-size: 20px;
+    grid-auto-flow: column;
+}
+.candidate-btn {
+    width: 330px;
+    height: 80px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.close {
+    cursor: pointer;
 }
 
 .result {
     float: right;
+    border: 1px solid black;
 }

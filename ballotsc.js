@@ -130,7 +130,7 @@ function button14F () {
 function showList() {
     let list = "<ul>"
     for (let i = 0; i <itemList.length; i++) {
-        list += "<li>" + itemList[i] + "<span class='close' id=" + i + ">" + "\u00D7" + "</span></li>";
+        list += "<li>" + itemList[i] + "<span class='close' id=" + i + ">" + "&times;" + "</span></li>";
     }
     list += "</ul>";
     document.querySelector(".candiateList").innerHTML = list;
