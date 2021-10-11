@@ -29,100 +29,130 @@ button14.addEventListener("click", button14F);
 
 function button1F () {
     console.log(itemList);
-    let item = document.querySelector(".button1").value;
 
-    itemList.push(item);
+    let item = document.querySelector(".button1").value;
+    if(itemList.includes(item) == false){
+        itemList.push(item);
+    }
+
     
     showList();
 }
 
 function button2F () {
+
     let item = document.querySelector(".button2").value;
-    itemList.push(item);
+    if(itemList.includes(item) == false){
+        itemList.push(item);
+    }
 
     showList();
 }
 
 function button3F () {
     let item = document.querySelector(".button3").value;
-    itemList.push(item);
+    if(itemList.includes(item) == false){
+        itemList.push(item);
+    }
 
     showList();
 }
 
 function button4F () {
     let item = document.querySelector(".button4").value;
-    itemList.push(item);
+    if(itemList.includes(item) == false){
+        itemList.push(item);
+    }
 
     showList();
 }
 
 function button5F () {
     let item = document.querySelector(".button5").value;
-    itemList.push(item);
+    if(itemList.includes(item) == false){
+        itemList.push(item);
+    }
 
     showList();
 }
 
 function button6F () {
     let item = document.querySelector(".button6").value;
-    itemList.push(item);
+    if(itemList.includes(item) == false){
+        itemList.push(item);
+    }
 
     showList();
 }
 
 function button7F () {
     let item = document.querySelector(".button7").value;
-    itemList.push(item);
+    if(itemList.includes(item) == false){
+        itemList.push(item);
+    }
 
     showList();
 }
 
 function button8F () {
     let item = document.querySelector(".button8").value;
-    itemList.push(item);
+    if(itemList.includes(item) == false){
+        itemList.push(item);
+    }
 
     showList();
 }
 
 function button9F () {
     let item = document.querySelector(".button9").value;
-    itemList.push(item);
+    if(itemList.includes(item) == false){
+        itemList.push(item);
+    }
 
     showList();
 }
 
 function button10F () {
     let item = document.querySelector(".button10").value;
-    itemList.push(item);
+    if(itemList.includes(item) == false){
+        itemList.push(item);
+    }
 
     showList();
 }
 
 function button11F () {
     let item = document.querySelector(".button11").value;
-    itemList.push(item);
+    if(itemList.includes(item) == false){
+        itemList.push(item);
+    }
 
     showList();
 }
 
 function button12F () {
     let item = document.querySelector(".button12").value;
-    itemList.push(item);
+    if(itemList.includes(item) == false){
+        itemList.push(item);
+    }
 
     showList();
 }
 
 function button13F () {
     let item = document.querySelector(".button13").value;
-    itemList.push(item);
+    if(itemList.includes(item) == false){
+        itemList.push(item);
+    }
 
     showList();
 }
 
 function button14F () {
     let item = document.querySelector(".button14").value;
-    itemList.push(item);
+    if(itemList.includes(item) == false){
+        itemList.push(item);
+    }
 
     showList();
 }
