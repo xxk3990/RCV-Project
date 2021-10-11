@@ -28,14 +28,11 @@ let button14 = document.querySelector(".button14");
 button14.addEventListener("click", button14F);
 
 function button1F () {
-    console.log(itemList);
-
     let item = document.querySelector(".button1").value;
     if(itemList.includes(item) == false){
         itemList.push(item);
     }
 
-    
     showList();
 }
 
