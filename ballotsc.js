@@ -221,7 +221,7 @@ function button14F () {
 
 
 function showList() {
-    let list = "<ul class = candidate-list>"
+    let list = "<ol id = 'candidate-list'>"
     for (let i = 0; i <itemList.length; i++) {
         list += `<li class = 'candidate-li'><span class = 'candidate-name'>${itemList[i]}</span><span class='close' id='${i}'>&times;</span></li>
         <input type="button" class="upButton" value="up" id='${i}'"/>

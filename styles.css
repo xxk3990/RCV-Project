@@ -36,13 +36,10 @@
     margin-right: 25px;
 }
 
-.candidate-list {
-    list-style-type: none;
+#candidate-list {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-left: 0;
-    padding-left: 0;
+    align-items: flex-start;
 }
 
 .candidate-li {
@@ -52,6 +49,10 @@
     border: 1px solid black;
     text-align: center;
     padding-top: 30px;
+}
+
+#candidate-list li::marker {
+    color: #446CD1;
 }
 
 .candidate-name {
@@ -66,16 +67,7 @@
     text-align: center;
 }
 
-#candidate-list {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
 
-#candidate-list li::marker {
-    float: left;
-    color: #446CD1;
-}
 
 .popup .overlay{
     position: fixed;
