@@ -27,6 +27,13 @@ button13.addEventListener("click", button13F);
 let button14 = document.querySelector(".button14");
 button14.addEventListener("click", button14F);
 
+function togglePopup(){
+    document.querySelector("#popup-1").classList.toggle("active");
+
+    document.querySelector(".candidateList-popup").innerHTML = itemList;
+
+  }
+
 let candidateLi = document.querySelectorAll("#candidate-list li");
 
 function button1F () {
@@ -36,7 +43,6 @@ function button1F () {
             return;
         } else {
             itemList.push(item);
-            candidateNum += 1;
         }
     }
 
@@ -218,6 +224,7 @@ function showList() {
     let list = "<ul class = candidate-list>"
     for (let i = 0; i <itemList.length; i++) {
         list += `<li class = 'candidate-li'><span class = 'candidate-name'>${itemList[i]}</span><span class='close' id='${i}'>&times;</span></li>
+        <input type="button" class="upButton" value="up" id='${i}'"/>
         <input type="button" class="downButton" value="down" id='${i}'"/>
         `;
     }
@@ -229,9 +236,16 @@ function showList() {
     for (let i = 0; i < deleteButtons.length; i++) {
         deleteButtons[i].addEventListener("click", deleteItem);
     }
+    // down buttons
     let downButtons = document.querySelectorAll(".downButton");
     for (let i = 0; i < deleteButtons.length; i++) {
         downButtons[i].addEventListener("click", downButton);
+    }
+
+    // up buttons
+    let upButtons = document.querySelectorAll(".upButton");
+    for (let i = 0; i < deleteButtons.length; i++) {
+        upButtons[i].addEventListener("click", upButton);
     }
 }
 
@@ -240,15 +254,22 @@ function deleteItem() {
     itemList.splice(id, 1);
     showList();
 }
+// up button
+function upButton(){
+    let id = this.getAttribute("id");
+    console.log(`up button with ${itemList[id]}`);
+    showList();
+}
 
 // down button
 function downButton(){
     let id = this.getAttribute("id");
+    console.log(`down button with ${itemList[id]}`);
+
     let f = itemList.splice(id, 1)[0];
     if(id !== 0 && id < itemList.length){
         itemList.splice(id-1, 0, f);
     }
-    console.log(f);
     showList();
 }
 

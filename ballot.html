@@ -16,6 +16,18 @@
         <a href="ballot.html">Go to ballot</a>
         <a href="about.html">Go to about</a>
     </div>
+
+    <button class="postButton" onclick="togglePopup()">Confirm</button>
+
+    <div class="popup" id="popup-1">
+        <div class="overlay"></div>
+        <div class="content">
+          <div class="close-btn" onclick="togglePopup()">&times;</div>
+          <section class="candidateList-popup">
+            </section>
+        </div>
+    </div>
+      
     <div class="candiateButtons">
         <input type="button" class="button1 candidate-btn" value="candidate 1" />
         <input type="button" class="button2 candidate-btn" value="candidate 2" />
@@ -38,7 +50,6 @@
         <section class="candidateList">
         </section>
     </div>
-
 
 
     <script src="ballotsc.js"></script>
