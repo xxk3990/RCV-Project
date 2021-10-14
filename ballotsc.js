@@ -27,11 +27,16 @@ button13.addEventListener("click", button13F);
 let button14 = document.querySelector(".button14");
 button14.addEventListener("click", button14F);
 
+let candidateLi = document.querySelectorAll("#candidate-list li");
+
 function button1F () {
     let item = document.querySelector(".button1").value;
-    if(itemList.length < 5){
-        if(itemList.includes(item) == false){
+    if(itemList.includes(item) == false) {
+        if(itemList.length === 5) {
+            return;
+        } else {
             itemList.push(item);
+            candidateNum += 1;
         }
     }
 
@@ -41,8 +46,10 @@ function button1F () {
 function button2F () {
 
     let item = document.querySelector(".button2").value;
-    if(itemList.length < 5){
-        if(itemList.includes(item) == false){
+    if(itemList.includes(item) == false) {
+        if(itemList.length === 5) {
+            return;
+        } else {
             itemList.push(item);
         }
     }
@@ -52,8 +59,10 @@ function button2F () {
 
 function button3F () {
     let item = document.querySelector(".button3").value;
-    if(itemList.length < 5){
-        if(itemList.includes(item) == false){
+    if(itemList.includes(item) == false) {
+        if(itemList.length === 5) {
+            return;
+        } else {
             itemList.push(item);
         }
     }
@@ -63,8 +72,10 @@ function button3F () {
 
 function button4F () {
     let item = document.querySelector(".button4").value;
-    if(itemList.length < 5){
-        if(itemList.includes(item) == false){
+    if(itemList.includes(item) == false) {
+        if(itemList.length === 5) {
+            return;
+        } else {
             itemList.push(item);
         }
     }
@@ -74,8 +85,10 @@ function button4F () {
 
 function button5F () {
     let item = document.querySelector(".button5").value;
-    if(itemList.length < 5){
-        if(itemList.includes(item) == false){
+    if(itemList.includes(item) == false) {
+        if(itemList.length === 5) {
+            return;
+        } else {
             itemList.push(item);
         }
     }
@@ -85,8 +98,10 @@ function button5F () {
 
 function button6F () {
     let item = document.querySelector(".button6").value;
-    if(itemList.length < 5){
-        if(itemList.includes(item) == false){
+    if(itemList.includes(item) == false) {
+        if(itemList.length === 5) {
+            return;
+        } else {
             itemList.push(item);
         }
     }
@@ -96,8 +111,10 @@ function button6F () {
 
 function button7F () {
     let item = document.querySelector(".button7").value;
-    if(itemList.length < 5){
-        if(itemList.includes(item) == false){
+    if(itemList.includes(item) == false) {
+        if(itemList.length === 5) {
+            return;
+        } else {
             itemList.push(item);
         }
     }
@@ -107,8 +124,10 @@ function button7F () {
 
 function button8F () {
     let item = document.querySelector(".button8").value;
-    if(itemList.length < 5){
-        if(itemList.includes(item) == false){
+    if(itemList.includes(item) == false) {
+        if(itemList.length === 5) {
+            return;
+        } else {
             itemList.push(item);
         }
     }
@@ -118,8 +137,10 @@ function button8F () {
 
 function button9F () {
     let item = document.querySelector(".button9").value;
-    if(itemList.length < 5){
-        if(itemList.includes(item) == false){
+    if(itemList.includes(item) == false) {
+        if(itemList.length === 5) {
+            return;
+        } else {
             itemList.push(item);
         }
     }
@@ -129,8 +150,10 @@ function button9F () {
 
 function button10F () {
     let item = document.querySelector(".button10").value;
-    if(itemList.length < 5){
-        if(itemList.includes(item) == false){
+    if(itemList.includes(item) == false) {
+        if(itemList.length === 5) {
+            return;
+        } else {
             itemList.push(item);
         }
     }
@@ -140,8 +163,10 @@ function button10F () {
 
 function button11F () {
     let item = document.querySelector(".button11").value;
-    if(itemList.length < 5){
-        if(itemList.includes(item) == false){
+    if(itemList.includes(item) == false) {
+        if(itemList.length === 5) {
+            return;
+        } else {
             itemList.push(item);
         }
     }
@@ -151,8 +176,10 @@ function button11F () {
 
 function button12F () {
     let item = document.querySelector(".button12").value;
-    if(itemList.length < 5){
-        if(itemList.includes(item) == false){
+    if(itemList.includes(item) == false) {
+        if(itemList.length === 5) {
+            return;
+        } else {
             itemList.push(item);
         }
     }
@@ -162,8 +189,10 @@ function button12F () {
 
 function button13F () {
     let item = document.querySelector(".button13").value;
-    if(itemList.length < 5){
-        if(itemList.includes(item) == false){
+    if(itemList.includes(item) == false) {
+        if(itemList.length === 5) {
+            return;
+        } else {
             itemList.push(item);
         }
     }
@@ -173,8 +202,10 @@ function button13F () {
 
 function button14F () {
     let item = document.querySelector(".button14").value;
-    if(itemList.length < 5){
-        if(itemList.includes(item) == false){
+    if(itemList.includes(item) == false) {
+        if(itemList.length === 5) {
+            return;
+        } else {
             itemList.push(item);
         }
     }
@@ -190,10 +221,10 @@ function showList() {
         <input type="button" class="downButton" value="down" id='${i}'"/>
         `;
     }
-    list += "</ul>";
-    document.querySelector(".candiateList").innerHTML = list;
+    list += '</ol>'
+    document.querySelector(".candidateList").innerHTML = list;
 
-
+  //  candidateList.appendChild(candidateLi);
     let deleteButtons = document.querySelectorAll(".close");
     for (let i = 0; i < deleteButtons.length; i++) {
         deleteButtons[i].addEventListener("click", deleteItem);

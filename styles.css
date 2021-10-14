@@ -65,3 +65,14 @@
 #ballot-title {
     text-align: center;
 }
+
+#candidate-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#candidate-list li::marker {
+    float: left;
+    color: #446CD1;
+}
