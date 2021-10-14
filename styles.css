@@ -86,7 +86,7 @@
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
     background-color: #efeeee;
-    width: 500px;
+    width: 1000px;
     height: 650px;
     z-index: 2;
     text-align: center;

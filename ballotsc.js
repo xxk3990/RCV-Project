@@ -29,8 +29,13 @@ button14.addEventListener("click", button14F);
 
 function togglePopup(){
     document.querySelector("#popup-1").classList.toggle("active");
-
-    document.querySelector(".candidateList-popup").innerHTML = itemList;
+    let list = "<ol id = 'candidate-list'>"
+    for (let i = 0; i <itemList.length; i++) {
+        list += `<li class = 'candidate-li'><span class = 'candidate-name'>${itemList[i]}</span></li>
+        `;
+    }
+    list += '</ol>'
+    document.querySelector(".candidateList-popup").innerHTML = list;
 
   }
 
