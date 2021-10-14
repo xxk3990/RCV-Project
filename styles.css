@@ -1,6 +1,7 @@
 .title {
     text-align: center;
 }
+
 .candiateList {
     display: inline-block;
 }
@@ -17,6 +18,7 @@
     font-size: 20px;
     grid-auto-flow: column;
 }
+
 .candidate-btn {
     width: 330px;
     height: 80px;
@@ -31,7 +33,9 @@
 .result {
     float: right;
     border: 1px solid black;
+    margin-right: 25px;
 }
+
 .candidate-list {
     list-style-type: none;
     display: flex;
@@ -47,9 +51,17 @@
     border-radius: 20px;
     border: 1px solid black;
     text-align: center;
-    vertical-align: middle;
+    padding-top: 30px;
 }
 
-/* .candidate-name {
-vertical-align: middle;
-} */
+.candidate-name {
+    padding-top: 15px;
+}
+
+#ballot-instructions {
+    padding: 10px;
+}
+
+#ballot-title {
+    text-align: center;
+}
