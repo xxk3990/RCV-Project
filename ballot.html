@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    
     <title>RCV Ballot</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -28,6 +30,43 @@
 
         </div>
     </div>
+
+    <button class="postButton" onclick="togglePopup()">Confirm</button>
+
+    <div class="popup" id="popup-1">
+        <div class="overlay"></div>
+        <div class="content">
+          <div class="close-btn" onclick="togglePopup()">&times;</div>
+          <section class="candidateList-popup">
+            </section>
+        </div>
+    </div>
+      
+    <div class="candiateButtons">
+        <input type="button" class="button1 candidate-btn" value="candidate 1" />
+        <input type="button" class="button2 candidate-btn" value="candidate 2" />
+        <input type="button" class="button3 candidate-btn" value="candidate 3" />
+        <input type="button" class="button4 candidate-btn" value="candidate 4" />
+        <input type="button" class="button5 candidate-btn" value="candidate 5" />
+        <input type="button" class="button6 candidate-btn" value="candidate 6" />
+        <input type="button" class="button7 candidate-btn" value="candidate 7" />
+        <input type="button" class="button8 candidate-btn" value="candidate 8" />
+        <input type="button" class="button9 candidate-btn" value="candidate 9" />
+        <input type="button" class="button10 candidate-btn" value="candidate 10" />
+        <input type="button" class="button11 candidate-btn" value="candidate 11" />
+        <input type="button" class="button12 candidate-btn" value="candidate 12" />
+        <input type="button" class="button13 candidate-btn" value="candidate 13" />
+        <input type="button" class="button14 candidate-btn" value="candidate 14" />
+    </div>
+    <div class="result">
+        <h2 id = "ballot-title">Your Ballot</h2>
+        <p id = "ballot-instructions">Rank up to 5 candidates on your ballot. Tap on candidate name to change rank or remove from your ballot</p>
+        <section class="candidateList">
+        </section>
+    </div>
+
+
+    <script src="ballotsc.js"></script>
 </body>
 
 </html>
