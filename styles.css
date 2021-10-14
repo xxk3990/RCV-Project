@@ -117,3 +117,13 @@
     transition: all 300ms ease-in-out;
     transform: translate(-50%, -50%) scale(1);
   }
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* body {
+    background-color: #13268b;
+    background-image: url("images/texture.png");
+} */
