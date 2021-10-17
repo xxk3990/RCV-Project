@@ -87,7 +87,7 @@
     transform: translate(-50%, -50%) scale(0);
     background-color: #efeeee;
     width: 1000px;
-    height: 650px;
+    height: 700px;
     z-index: 2;
     text-align: center;
     padding: 20px;
@@ -100,13 +100,14 @@
     top: 10px;
     width: 30px;
     height: 30px;
-    background-color: rgba(59, 56, 56, 0.2);
     color: #fff;
     font-size: 25px;
     font-weight: 600;
     line-height: 25px;
     text-align: center;
-    border-radius: 50%;
+  }
+  .popupButton {
+    bottom: 0px;
   }
   
   .popup.active .overlay {
