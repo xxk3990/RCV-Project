@@ -39,9 +39,6 @@ function togglePopup(){
     list += '</ol>'
     document.querySelector(".candidateList-popup").innerHTML = list;
     }
-    else{
-        alert("Please choose 5 candidates!");
-    }
   }
 
 let candidateLi = document.querySelectorAll("#candidate-list li");
