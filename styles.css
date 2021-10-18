@@ -1,3 +1,86 @@
+.heading {
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 7%;
+    font-family: 'Inter', sans-serif;
+}
+
+.linkImage {
+    text-decoration: none;
+    color: white;
+}
+
+.link {
+    margin-top: 7px;
+    text-decoration: none;
+    color: white;
+}
+
+.linkDiv {
+    border: 15px solid rgba(19, 38, 139, 0.85);
+    border-radius: 10px;
+    background-color: rgba(19, 38, 139, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#landingBody {
+    background-color: #fcf6e8;
+    background-image: url("images/texture.png");
+    background-repeat: repeat;
+    color: white;
+    width: auto;
+}
+
+#rectangle {
+    position:relative;
+    width: 600px;
+    min-height: 60px;
+    margin-top: 4%;
+    padding-top: 20px;
+    transform: perspective(10px) rotateX(-1deg);
+    left: -10%;
+    background-color: rgba(255, 99, 79, 0.85);
+}
+
+#headingDiv {
+    position: absolute;
+    left: 2%;
+    top: 10%;
+}
+
+
+
+
+
+#candidate {
+    width: 780px;
+    height: 80px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    border: 3px solid black;
+    border-radius: 25px;
+}
+
+#nameParty {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+#x {
+    margin-right: 10px;
+}
 .title {
     text-align: center;
 }
@@ -26,8 +109,35 @@
     border-radius: 20px;
 }
 
+.candidate-btn:focus {
+    background-color: #446CD1;
+    color: white;
+}
+
 .close {
     cursor: pointer;
+    float: right;
+    color: gray;
+    width: 30px;
+    height: 30px;
+    padding-top: 25px;
+}
+
+section.up-down {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    float: right;
+    padding: 10px;
+}
+section.up-down button {
+    width: 70px;
+    height: 30px;
+    border-radius: 12px;
+    border-color: #3272E9;
+    background-color: white;
+    cursor: pointer;
+    color: #3272E9;
 }
 
 .result {
@@ -36,23 +146,36 @@
     margin-right: 25px;
 }
 
-#candidate-list {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
 .candidate-li {
     width: 860px;
     height: 80px;
     border-radius: 20px;
     border: 1px solid black;
     text-align: center;
-    padding-top: 30px;
+    margin-bottom: 15px;
 }
 
-#candidate-list li::marker {
-    color: #446CD1;
+#candidate-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    counter-reset: list-numbers;
+    list-style-type: none;
+    font-size: 20px;
+}
+
+#candidate-list li::before {
+    counter-increment: list-numbers;
+    content: counter(list-numbers);
+    color: white;
+    background: #446CD1;
+    border-radius: 50%;
+    min-width: 60px;
+    min-height: 60px;
+    font-size: 32px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 20px;
 }
 
 .candidate-name {
