@@ -222,7 +222,7 @@ function button14F() {
 
 function showList() {
     let list = "<ul id = 'candidate-list'>"
-    for (let i = 0; i <itemList.length; i++) {
+    for (let i = 0; i < itemList.length; i++) {
         list += `<li class = 'candidate-li'><span class = 'candidate-name'>${itemList[i]}</span><section class = "up-down"><button type="button" class="upButton" value="up" id='${i}'>&#x25B2;</button>
         <button type="button" class="downButton" value="down" id='${i}'">&#x25BC;</button></section><span class='close' id='${i}'>&times;</span></li>
         `;
@@ -236,15 +236,31 @@ function showList() {
         deleteButtons[i].addEventListener("click", deleteItem);
     }
     // down buttons
-    let downButtons = document.querySelectorAll("#downButton");
-    for (let i = 0; i < deleteButtons.length; i++) {
-        downButtons[i].addEventListener("click", downButton);
+    const allLi = document.querySelectorAll(".candidate-li");
+    for (let j = 0; j < deleteButtons.length; j++) {
+        for (let i = 0; i < allLi.length; i++) {
+            allLi[i].onclick = () => {
+                showArrows(allLi[i], deleteButtons, deleteButtons[j])
+            }
+        }
     }
 
     // up buttons
-    let upButtons = document.querySelectorAll("#upButton");
+}
+
+function showArrows(listItem, deleteButtons, closeBtn) {
+    const upDown = listItem.querySelector(".up-down");
+    upDown.style.visibility = "visible";
+    listItem.style.backgroundColor = "#3272E9";
+    listItem.style.color = "white";
+    closeBtn.style.color = "white";
+    let upButtons = document.querySelectorAll(".upButton");
     for (let i = 0; i < deleteButtons.length; i++) {
-        upButtons[i].addEventListener("click", upButton);
+        upButtons[i].addEventListener('click', upButton);
+    }
+    let downButtons = document.querySelectorAll('.downButton');
+    for (let i = 0; i < deleteButtons.length; i++) {
+        downButtons[i].addEventListener('click', downButton);
     }
 }
 
@@ -259,13 +275,12 @@ function upButton() {
     console.log(liClass);
     const li = document.querySelectorAll('#candidate-list li');
     const candidateList = document.querySelector('#candidate-list')
-    const parseLi = parseInt(liClass);
     //let moveUp = false;
     for (let i = 1; i < li.length; i++) {
-        candidateList.insertBefore(li[parseLi - 1], li[i]);
-        candidateList.removeChild(li[i]);
-       // candidateList.removeChild()
-       // console.log(`down button with ${itemList[id]}`);
+        candidateList.insertBefore(li[i - 1], li[i]);
+        //       candidateList.removeChild(li[i]);
+        // candidateList.removeChild()
+        // console.log(`down button with ${itemList[id]}`);
     }
 
     showList();
@@ -273,25 +288,20 @@ function upButton() {
 
 // down button
 function downButton() {
-  //  let id = this.getAttribute("id");
-  //  let moveDown = false;
-   // console.log(`down button with ${itemList[id]}`);
-  //  const li = document.querySelectorAll('#candidate-list li');
-    let liClass = this.className;
-    const li = document.querySelectorAll('#candidate-list li');
-    const parseLi = parseInt(liClass);
+    let id = this.getAttribute('id');
+    const candidateList = document.querySelector('#candidate-list');
+    const li = candidateList.querySelectorAll('li');
     //let moveUp = false;
-    for (let i = 1; i < li.length - 1; i++) {
-        const parentList = li[i].parentNode;
-        parentList.insertBefore(li[parseLi + 1], li[i]);
+    for (let i = 1; i < (li.length - 1); i++) {
+        li[i].parentNode.insertBefore(li[i + 1], li[i]);
         //candidateList.removeChild(li[i]);
-       // candidateList.removeChild()
-       // console.log(`down button with ${itemList[id]}`);
+        // candidateList.removeChild()
+        // console.log(`down button with ${itemList[id]}`);
     }
-
-    // let f = itemList.splice(id, 1)[0];
-    // if(id !== 0 && id < itemList.length){
-    //     itemList.splice(id-1, 0, f);
+    // const parseId = parseInt(id);
+    // let f = itemList.splice(parseId, 1)[0];
+    // if(id !== 0 && parseId < itemList.length){
+    //     itemList.splice(parseId-1, 0, f);
     // }
     showList();
 }
