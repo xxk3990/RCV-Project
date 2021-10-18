@@ -275,9 +275,9 @@ function upButton() {
     let parseId = parseInt(id);
     let f = itemList.splice(parseId, 1)[0];
     if (id !== 0 && parseId < itemList.length) {
-            console.log(f);
-            itemList.splice(parseId - 1, 0, f);
-            this.id = parseId - 1;
+        console.log(f);
+        itemList.splice(parseId - 1, 0, f);
+        this.id = parseId - 1;
     }
     showList();
 }
@@ -288,9 +288,9 @@ function downButton() {
     let parseId = parseInt(id);
     let f = itemList.splice(parseId, 1)[0];
     if (id !== 0 && parseId < itemList.length) {
-            console.log(f);
-            itemList.splice(parseId + 1, 0, f);
-            this.id = parseId + 1;
+        console.log(f);
+        itemList.splice(parseId + 1, 0, f);
+        this.id = parseId + 1;
     }
     showList();
 }
