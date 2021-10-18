@@ -28,7 +28,7 @@ let button14 = document.querySelector(".button14");
 button14.addEventListener("click", button14F);
 
 function togglePopup(){
-    if(itemList.length == 5){
+
     document.querySelector("#popup-1").classList.toggle("active");
     
     let list = "<ol id = 'candidate-list'>"
@@ -38,7 +38,7 @@ function togglePopup(){
     }
     list += '</ol>'
     document.querySelector(".candidateList-popup").innerHTML = list;
-    }
+    
   }
 
 let candidateLi = document.querySelectorAll("#candidate-list li");
@@ -264,6 +264,7 @@ function deleteItem() {
 function upButton(){
     let id = this.getAttribute("id");
     console.log(`up button with ${itemList[id]}`);
+    
     showList();
 }
 
