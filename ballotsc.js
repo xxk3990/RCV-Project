@@ -271,38 +271,27 @@ function deleteItem() {
 }
 // up button
 function upButton() {
-    let liClass = this.className;
-    console.log(liClass);
-    const li = document.querySelectorAll('#candidate-list li');
-    const candidateList = document.querySelector('#candidate-list')
-    //let moveUp = false;
-    for (let i = 1; i < li.length; i++) {
-        candidateList.insertBefore(li[i - 1], li[i]);
-        //       candidateList.removeChild(li[i]);
-        // candidateList.removeChild()
-        // console.log(`down button with ${itemList[id]}`);
+    let id = this.getAttribute('id');
+    let parseId = parseInt(id);
+    let f = itemList.splice(parseId, 1)[0];
+    if (id !== 0 && parseId < itemList.length) {
+            console.log(f);
+            itemList.splice(parseId - 1, 0, f);
+            this.id = parseId - 1;
     }
-
     showList();
 }
 
 // down button
 function downButton() {
     let id = this.getAttribute('id');
-    const candidateList = document.querySelector('#candidate-list');
-    const li = candidateList.querySelectorAll('li');
-    //let moveUp = false;
-    for (let i = 1; i < (li.length - 1); i++) {
-        li[i].parentNode.insertBefore(li[i + 1], li[i]);
-        //candidateList.removeChild(li[i]);
-        // candidateList.removeChild()
-        // console.log(`down button with ${itemList[id]}`);
+    let parseId = parseInt(id);
+    let f = itemList.splice(parseId, 1)[0];
+    if (id !== 0 && parseId < itemList.length) {
+            console.log(f);
+            itemList.splice(parseId + 1, 0, f);
+            this.id = parseId + 1;
     }
-    // const parseId = parseInt(id);
-    // let f = itemList.splice(parseId, 1)[0];
-    // if(id !== 0 && parseId < itemList.length){
-    //     itemList.splice(parseId-1, 0, f);
-    // }
     showList();
 }
 
