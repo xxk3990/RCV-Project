@@ -123,15 +123,17 @@
     padding-top: 25px;
 }
 
-section.up-down {
+.up-down {
+    display: none;
+}
+
+.up-down-btns {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    float: right;
     padding: 10px;
-    visibility: hidden;
 }
-section.up-down button {
+.up-down-btns button {
     width: 70px;
     height: 30px;
     border-radius: 12px;

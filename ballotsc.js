@@ -223,8 +223,8 @@ function button14F() {
 function showList() {
     let list = "<ul id = 'candidate-list'>"
     for (let i = 0; i < itemList.length; i++) {
-        list += `<li class = 'candidate-li'><span class = 'candidate-name'>${itemList[i]}</span><section class = "up-down"><button type="button" class="upButton" value="up" id='${i}'>&#x25B2;</button>
-        <button type="button" class="downButton" value="down" id='${i}'">&#x25BC;</button></section><span class='close' id='${i}'>&times;</span></li>
+        list += `<li class = 'candidate-li'><span class = 'candidate-name'>${itemList[i]}</span><section class = "up-down"><section class = "up-down-btns"><button type="button" class="upButton" value="up" id='${i}'>&#x25B2;</button>
+        <button type="button" class="downButton" value="down" id='${i}'">&#x25BC;</button></section></section><span class='close' id='${i}'>&times;</span></li>
         `;
     }
     list += '</ul>'
@@ -237,23 +237,26 @@ function showList() {
     }
     // down buttons
     const allLi = document.querySelectorAll(".candidate-li");
-    for (let j = 0; j < deleteButtons.length; j++) {
+
         for (let i = 0; i < allLi.length; i++) {
             allLi[i].onclick = () => {
-                showArrows(allLi[i], deleteButtons, deleteButtons[j])
+                deleteButtons.forEach(db => {
+                    showArrows(allLi[i], deleteButtons, db)
+                });  
             }
         }
-    }
 
     // up buttons
 }
 
 function showArrows(listItem, deleteButtons, closeBtn) {
     const upDown = listItem.querySelector(".up-down");
-    upDown.style.visibility = "visible";
+    upDown.style.display = "block";
+    upDown.style.float = "right";
     listItem.style.backgroundColor = "#3272E9";
     listItem.style.color = "white";
     closeBtn.style.color = "white";
+    closeBtn.style.marginRight = "30px";
     let upButtons = document.querySelectorAll(".upButton");
     for (let i = 0; i < deleteButtons.length; i++) {
         upButtons[i].addEventListener('click', upButton);
@@ -274,7 +277,7 @@ function upButton() {
     let id = this.getAttribute('id');
     let parseId = parseInt(id);
     let f = itemList.splice(parseId, 1)[0];
-    if (id !== 0 && parseId < itemList.length) {
+    if (parseId < itemList.length) {
         console.log(f);
         itemList.splice(parseId - 1, 0, f);
         this.id = parseId - 1;
@@ -287,7 +290,7 @@ function downButton() {
     let id = this.getAttribute('id');
     let parseId = parseInt(id);
     let f = itemList.splice(parseId, 1)[0];
-    if (id !== 0 && parseId < itemList.length) {
+    if (parseId < itemList.length) {
         console.log(f);
         itemList.splice(parseId + 1, 0, f);
         this.id = parseId + 1;
