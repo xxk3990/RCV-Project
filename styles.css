@@ -89,7 +89,7 @@
     display: inline-block;
 }
 
-.candiateButtons {
+.candidateButtons {
     width: 500px;
     float: left;
     padding: 10px;
@@ -123,14 +123,17 @@
     padding-top: 25px;
 }
 
-section.up-down {
+.up-down {
+    display: none;
+}
+
+.up-down-btns {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    float: right;
     padding: 10px;
 }
-section.up-down button {
+.up-down-btns button {
     width: 70px;
     height: 30px;
     border-radius: 12px;
@@ -153,6 +156,7 @@ section.up-down button {
     border: 1px solid black;
     text-align: center;
     margin-bottom: 15px;
+    cursor: pointer;
 }
 
 #candidate-list {
@@ -164,7 +168,7 @@ section.up-down button {
     font-size: 20px;
 }
 
-#candidate-list li::before {
+#candidate-list li:before {
     counter-increment: list-numbers;
     content: counter(list-numbers);
     color: white;
@@ -177,6 +181,7 @@ section.up-down button {
     padding-right: 10px;
     margin-right: 20px;
 }
+
 
 .candidate-name {
     padding-top: 15px;
