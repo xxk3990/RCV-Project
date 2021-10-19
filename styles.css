@@ -146,6 +146,15 @@ section.up-down button {
     margin-right: 25px;
 }
 
+.review {
+    float: center;
+    border: 1px solid black;
+    margin-right: 25px;
+    text-align: center;
+    margin-left: 500px;
+    margin-right: 500px;
+}
+
 .candidate-li {
     width: 860px;
     height: 80px;
@@ -190,7 +199,15 @@ section.up-down button {
     text-align: center;
 }
 
-
+.popupReview {
+    position: fixed;
+    border-style: solid;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 60px;
+    margin-left: 400px;
+    border-radius: 20px;
+}
 
 .popup .overlay{
     position: fixed;
@@ -198,19 +215,19 @@ section.up-down button {
     left: 0px;
     width: 100vw;
     height: 100vh;
-    background: rgba(59, 56, 56, .95);
+    background: white;
     z-index: 1;
     display: none;
   }
+
   .popup .content {
-    border-radius: 20px;
+
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    background-color: #efeeee;
-    width: 1000px;
-    height: 700px;
+    transform: scale(0);
+    width: 1820px;
+    height: 960px;
     z-index: 2;
     text-align: center;
     padding: 20px;
@@ -239,8 +256,8 @@ section.up-down button {
     position: absolute;
     width: 140px;
     height: 50px;
-    left: 430px;
-    top: 600px;
+    left: 900px;
+    top: 800px;
     
     /* Primary Blue */
     

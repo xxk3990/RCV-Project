@@ -27,10 +27,9 @@ button13.addEventListener("click", button13F);
 let button14 = document.querySelector(".button14");
 button14.addEventListener("click", button14F);
 
-function togglePopup(){
-
+function togglePopup() {
+    if(itemList.length > 0){
     document.querySelector("#popup-1").classList.toggle("active");
-    
     let list = "<ol id = 'candidate-list'>"
     for (let i = 0; i <itemList.length; i++) {
         list += `<li class = 'candidate-li'><span class = 'candidate-name'>${itemList[i]}</span></li>
@@ -38,15 +37,18 @@ function togglePopup(){
     }
     list += '</ol>'
     document.querySelector(".candidateList-popup").innerHTML = list;
-    
-  }
+    }
+    else{
+        alert("Choose at least one candidate.");
+    }
+}
 
-let candidateLi = document.querySelectorAll("#candidate-list li");
+//let candidateLi = document.querySelectorAll("#candidate-list li");
 
-function button1F () {
+function button1F() {
     let item = document.querySelector(".button1").value;
-    if(itemList.includes(item) == false) {
-        if(itemList.length === 5) {
+    if (itemList.includes(item) == false) {
+        if (itemList.length === 5) {
             return;
         } else {
             itemList.push(item);
@@ -56,11 +58,11 @@ function button1F () {
     showList();
 }
 
-function button2F () {
+function button2F() {
 
     let item = document.querySelector(".button2").value;
-    if(itemList.includes(item) == false) {
-        if(itemList.length === 5) {
+    if (itemList.includes(item) == false) {
+        if (itemList.length === 5) {
             return;
         } else {
             itemList.push(item);
@@ -70,10 +72,10 @@ function button2F () {
     showList();
 }
 
-function button3F () {
+function button3F() {
     let item = document.querySelector(".button3").value;
-    if(itemList.includes(item) == false) {
-        if(itemList.length === 5) {
+    if (itemList.includes(item) == false) {
+        if (itemList.length === 5) {
             return;
         } else {
             itemList.push(item);
@@ -83,10 +85,10 @@ function button3F () {
     showList();
 }
 
-function button4F () {
+function button4F() {
     let item = document.querySelector(".button4").value;
-    if(itemList.includes(item) == false) {
-        if(itemList.length === 5) {
+    if (itemList.includes(item) == false) {
+        if (itemList.length === 5) {
             return;
         } else {
             itemList.push(item);
@@ -96,10 +98,10 @@ function button4F () {
     showList();
 }
 
-function button5F () {
+function button5F() {
     let item = document.querySelector(".button5").value;
-    if(itemList.includes(item) == false) {
-        if(itemList.length === 5) {
+    if (itemList.includes(item) == false) {
+        if (itemList.length === 5) {
             return;
         } else {
             itemList.push(item);
@@ -109,10 +111,10 @@ function button5F () {
     showList();
 }
 
-function button6F () {
+function button6F() {
     let item = document.querySelector(".button6").value;
-    if(itemList.includes(item) == false) {
-        if(itemList.length === 5) {
+    if (itemList.includes(item) == false) {
+        if (itemList.length === 5) {
             return;
         } else {
             itemList.push(item);
@@ -122,10 +124,10 @@ function button6F () {
     showList();
 }
 
-function button7F () {
+function button7F() {
     let item = document.querySelector(".button7").value;
-    if(itemList.includes(item) == false) {
-        if(itemList.length === 5) {
+    if (itemList.includes(item) == false) {
+        if (itemList.length === 5) {
             return;
         } else {
             itemList.push(item);
@@ -135,10 +137,10 @@ function button7F () {
     showList();
 }
 
-function button8F () {
+function button8F() {
     let item = document.querySelector(".button8").value;
-    if(itemList.includes(item) == false) {
-        if(itemList.length === 5) {
+    if (itemList.includes(item) == false) {
+        if (itemList.length === 5) {
             return;
         } else {
             itemList.push(item);
@@ -148,10 +150,10 @@ function button8F () {
     showList();
 }
 
-function button9F () {
+function button9F() {
     let item = document.querySelector(".button9").value;
-    if(itemList.includes(item) == false) {
-        if(itemList.length === 5) {
+    if (itemList.includes(item) == false) {
+        if (itemList.length === 5) {
             return;
         } else {
             itemList.push(item);
@@ -161,10 +163,10 @@ function button9F () {
     showList();
 }
 
-function button10F () {
+function button10F() {
     let item = document.querySelector(".button10").value;
-    if(itemList.includes(item) == false) {
-        if(itemList.length === 5) {
+    if (itemList.includes(item) == false) {
+        if (itemList.length === 5) {
             return;
         } else {
             itemList.push(item);
@@ -174,10 +176,10 @@ function button10F () {
     showList();
 }
 
-function button11F () {
+function button11F() {
     let item = document.querySelector(".button11").value;
-    if(itemList.includes(item) == false) {
-        if(itemList.length === 5) {
+    if (itemList.includes(item) == false) {
+        if (itemList.length === 5) {
             return;
         } else {
             itemList.push(item);
@@ -187,10 +189,10 @@ function button11F () {
     showList();
 }
 
-function button12F () {
+function button12F() {
     let item = document.querySelector(".button12").value;
-    if(itemList.includes(item) == false) {
-        if(itemList.length === 5) {
+    if (itemList.includes(item) == false) {
+        if (itemList.length === 5) {
             return;
         } else {
             itemList.push(item);
@@ -200,10 +202,10 @@ function button12F () {
     showList();
 }
 
-function button13F () {
+function button13F() {
     let item = document.querySelector(".button13").value;
-    if(itemList.includes(item) == false) {
-        if(itemList.length === 5) {
+    if (itemList.includes(item) == false) {
+        if (itemList.length === 5) {
             return;
         } else {
             itemList.push(item);
@@ -213,10 +215,10 @@ function button13F () {
     showList();
 }
 
-function button14F () {
+function button14F() {
     let item = document.querySelector(".button14").value;
-    if(itemList.includes(item) == false) {
-        if(itemList.length === 5) {
+    if (itemList.includes(item) == false) {
+        if (itemList.length === 5) {
             return;
         } else {
             itemList.push(item);
@@ -229,29 +231,48 @@ function button14F () {
 
 function showList() {
     let list = "<ul id = 'candidate-list'>"
-    for (let i = 0; i <itemList.length; i++) {
-        list += `<li class = 'candidate-li'><span class = 'candidate-name'>${itemList[i]}</span><section class = "up-down"><button type="button" class="upButton" value="up" id='${i}'>&#x25B2;</button>
-        <button type="button" class="downButton" value="down" id='${i}'">&#x25BC;</button></section><span class='close' id='${i}'>&times;</span></li>
+    for (let i = 0; i < itemList.length; i++) {
+        list += `<li class = 'candidate-li'><span class = 'candidate-name'>${itemList[i]}</span><section class = "up-down"><section class = "up-down-btns"><button type="button" class="upButton" value="up" id='${i}'>&#x25B2;</button>
+        <button type="button" class="downButton" value="down" id='${i}'">&#x25BC;</button></section></section><span class='close' id='${i}'>&times;</span></li>
         `;
     }
     list += '</ul>'
     document.querySelector(".candidateList").innerHTML = list;
 
-  //  candidateList.appendChild(candidateLi);
+    //  candidateList.appendChild(candidateLi);
     let deleteButtons = document.querySelectorAll(".close");
     for (let i = 0; i < deleteButtons.length; i++) {
         deleteButtons[i].addEventListener("click", deleteItem);
     }
     // down buttons
-    let downButtons = document.querySelectorAll(".downButton");
-    for (let i = 0; i < deleteButtons.length; i++) {
-        downButtons[i].addEventListener("click", downButton);
-    }
+    const allLi = document.querySelectorAll(".candidate-li");
+
+        for (let i = 0; i < allLi.length; i++) {
+            allLi[i].onclick = () => {
+                deleteButtons.forEach(db => {
+                    showArrows(allLi[i], deleteButtons, db)
+                });  
+            }
+        }
 
     // up buttons
+}
+
+function showArrows(listItem, deleteButtons, closeBtn) {
+    const upDown = listItem.querySelector(".up-down");
+    upDown.style.display = "block";
+    upDown.style.float = "right";
+    listItem.style.backgroundColor = "#3272E9";
+    listItem.style.color = "white";
+    closeBtn.style.color = "white";
+    closeBtn.style.marginRight = "30px";
     let upButtons = document.querySelectorAll(".upButton");
     for (let i = 0; i < deleteButtons.length; i++) {
-        upButtons[i].addEventListener("click", upButton);
+        upButtons[i].addEventListener('click', upButton);
+    }
+    let downButtons = document.querySelectorAll('.downButton');
+    for (let i = 0; i < deleteButtons.length; i++) {
+        downButtons[i].addEventListener('click', downButton);
     }
 }
 
@@ -261,21 +282,27 @@ function deleteItem() {
     showList();
 }
 // up button
-function upButton(){
-    let id = this.getAttribute("id");
-    console.log(`up button with ${itemList[id]}`);
-    
+function upButton() {
+    let id = this.getAttribute('id');
+    let parseId = parseInt(id);
+    let f = itemList.splice(parseId, 1)[0];
+    if (parseId <= itemList.length) {
+        console.log(f);
+        itemList.splice(parseId - 1, 0, f);
+        this.id = parseId - 1;
+    }
     showList();
 }
 
 // down button
-function downButton(){
-    let id = this.getAttribute("id");
-    console.log(`down button with ${itemList[id]}`);
-
-    let f = itemList.splice(id, 1)[0];
-    if(id !== 0 && id < itemList.length){
-        itemList.splice(id-1, 0, f);
+function downButton() {
+    let id = this.getAttribute('id');
+    let parseId = parseInt(id);
+    let f = itemList.splice(parseId, 1)[0];
+    if (parseId <= itemList.length) {
+        console.log(f);
+        itemList.splice(parseId + 1, 0, f);
+        this.id = parseId + 1;
     }
     showList();
 }
