@@ -277,7 +277,7 @@ function upButton() {
     let id = this.getAttribute('id');
     let parseId = parseInt(id);
     let f = itemList.splice(parseId, 1)[0];
-    if (parseId < itemList.length) {
+    if (parseId <= itemList.length) {
         console.log(f);
         itemList.splice(parseId - 1, 0, f);
         this.id = parseId - 1;
@@ -290,7 +290,7 @@ function downButton() {
     let id = this.getAttribute('id');
     let parseId = parseInt(id);
     let f = itemList.splice(parseId, 1)[0];
-    if (parseId < itemList.length) {
+    if (parseId <= itemList.length) {
         console.log(f);
         itemList.splice(parseId + 1, 0, f);
         this.id = parseId + 1;
