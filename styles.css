@@ -107,6 +107,7 @@
     height: 80px;
     cursor: pointer;
     border-radius: 20px;
+    background-color: white;
 }
 
 .candidate-btn:focus {
