@@ -221,14 +221,13 @@ function button14F () {
 
 
 function showList() {
-    let list = "<ol id = 'candidate-list'>"
+    let list = "<ul id = 'candidate-list'>"
     for (let i = 0; i <itemList.length; i++) {
-        list += `<li class = 'candidate-li'><span class = 'candidate-name'>${itemList[i]}</span><span class='close' id='${i}'>&times;</span></li>
-        <input type="button" class="upButton" value="up" id='${i}'"/>
-        <input type="button" class="downButton" value="down" id='${i}'"/>
+        list += `<li class = 'candidate-li'><span class = 'candidate-name'>${itemList[i]}</span><section class = "up-down"><button type="button" class="upButton" value="up" id='${i}'>&#x25B2;</button>
+        <button type="button" class="downButton" value="down" id='${i}'">&#x25BC;</button></section><span class='close' id='${i}'>&times;</span></li>
         `;
     }
-    list += '</ol>'
+    list += '</ul>'
     document.querySelector(".candidateList").innerHTML = list;
 
   //  candidateList.appendChild(candidateLi);
