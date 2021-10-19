@@ -168,7 +168,7 @@
     font-size: 20px;
 }
 
-#candidate-list li::before {
+#candidate-list li:before {
     counter-increment: list-numbers;
     content: counter(list-numbers);
     color: white;
@@ -181,6 +181,7 @@
     padding-right: 10px;
     margin-right: 20px;
 }
+
 
 .candidate-name {
     padding-top: 15px;
