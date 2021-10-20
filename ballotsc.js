@@ -274,6 +274,7 @@ function showArrows(listItem, deleteButtons, closeBtn) {
     for (let i = 0; i < deleteButtons.length; i++) {
         downButtons[i].addEventListener('click', downButton);
     }
+
 }
 
 function deleteItem() {
