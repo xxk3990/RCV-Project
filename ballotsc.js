@@ -43,6 +43,10 @@ function button1F() {
             return;
         } else {
             itemList.push(item);
+            this.style.backgroundColor = "#446CD1";
+            this.style.color = "white";
+            console.log(itemList.indexOf(item));
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -57,6 +61,9 @@ function button2F() {
             return;
         } else {
             itemList.push(item);
+            this.style.backgroundColor = "#446CD1";
+            this.style.color = "white";
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -70,6 +77,9 @@ function button3F() {
             return;
         } else {
             itemList.push(item);
+            this.style.backgroundColor = "#446CD1";
+            this.style.color = "white";
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -83,6 +93,9 @@ function button4F() {
             return;
         } else {
             itemList.push(item);
+            this.style.backgroundColor = "#446CD1";
+            this.style.color = "white";
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -96,6 +109,9 @@ function button5F() {
             return;
         } else {
             itemList.push(item);
+            this.style.backgroundColor = "#446CD1";
+            this.style.color = "white";
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -109,6 +125,9 @@ function button6F() {
             return;
         } else {
             itemList.push(item);
+            this.style.backgroundColor = "#446CD1";
+            this.style.color = "white";
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -122,6 +141,9 @@ function button7F() {
             return;
         } else {
             itemList.push(item);
+            this.style.backgroundColor = "#446CD1";
+            this.style.color = "white";
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -135,6 +157,9 @@ function button8F() {
             return;
         } else {
             itemList.push(item);
+            this.style.backgroundColor = "#446CD1";
+            this.style.color = "white";
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -148,6 +173,9 @@ function button9F() {
             return;
         } else {
             itemList.push(item);
+            this.style.backgroundColor = "#446CD1";
+            this.style.color = "white";
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -161,6 +189,9 @@ function button10F() {
             return;
         } else {
             itemList.push(item);
+            this.style.backgroundColor = "#446CD1";
+            this.style.color = "white";
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -174,6 +205,9 @@ function button11F() {
             return;
         } else {
             itemList.push(item);
+            this.style.backgroundColor = "#446CD1";
+            this.style.color = "white";
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -187,6 +221,9 @@ function button12F() {
             return;
         } else {
             itemList.push(item);
+            this.style.backgroundColor = "#446CD1";
+            this.style.color = "white";
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -200,6 +237,9 @@ function button13F() {
             return;
         } else {
             itemList.push(item);
+            this.style.backgroundColor = "#446CD1";
+            this.style.color = "white";
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -213,6 +253,9 @@ function button14F() {
             return;
         } else {
             itemList.push(item);
+            this.style.backgroundColor = "#446CD1";
+            this.style.color = "white";
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -238,13 +281,19 @@ function showList() {
     // down buttons
     const allLi = document.querySelectorAll(".candidate-li");
 
-        for (let i = 0; i < allLi.length; i++) {
-            allLi[i].onclick = () => {
-                deleteButtons.forEach(db => {
-                    showArrows(allLi[i], deleteButtons, db)
-                });  
-            }
+    for (let i = 0; i < allLi.length; i++) {
+        allLi[i].onclick = () => {
+            deleteButtons.forEach(db => {
+                showArrows(allLi[i], deleteButtons, db)
+                let otherCandidates = [...allLi].filter(arr => [...allLi].indexOf(arr) !== i);
+                otherCandidates.forEach(oc => {
+                    oc.classList.add('disabled')
+                })
+            });
         }
+
+
+    }
 
     // up buttons
 }
@@ -269,8 +318,13 @@ function showArrows(listItem, deleteButtons, closeBtn) {
 
 function deleteItem() {
     let id = this.getAttribute("id");
+    const candidateButtons = document.querySelector(".candidateButtons");
+    const buttonToDeselect = candidateButtons.querySelector(`#b-${id}`);
+    buttonToDeselect.style.backgroundColor = "white";
+    buttonToDeselect.style.color = "black";
     itemList.splice(id, 1);
     showList();
+    buttonToDeselect.id = "";
 }
 // up button
 function upButton() {
@@ -278,9 +332,13 @@ function upButton() {
     let parseId = parseInt(id);
     let f = itemList.splice(parseId, 1)[0];
     if (parseId <= itemList.length) {
+        const candidateButtons = document.querySelector(".candidateButtons");
+        const buttonToDeselect = candidateButtons.querySelector(`#b-${id}`);
         console.log(f);
         itemList.splice(parseId - 1, 0, f);
         this.id = parseId - 1;
+        buttonToDeselect.id = "";
+        buttonToDeselect.id = `b-${this.id}`;
     }
     showList();
 }
@@ -291,9 +349,13 @@ function downButton() {
     let parseId = parseInt(id);
     let f = itemList.splice(parseId, 1)[0];
     if (parseId <= itemList.length) {
+        const candidateButtons = document.querySelector(".candidateButtons");
+        const buttonToDeselect = candidateButtons.querySelector(`#b-${id}`);
         console.log(f);
         itemList.splice(parseId + 1, 0, f);
         this.id = parseId + 1;
+        buttonToDeselect.id = "";
+        buttonToDeselect.id = `b-${this.id}`;
     }
     showList();
 }
