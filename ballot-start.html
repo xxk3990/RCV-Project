@@ -14,21 +14,26 @@
 
 <body id="ballot-start">
     <div id="left">
-        <button id="back-button">- Back</button>
-        <h1 id="black-h1" class="start-h1">NYC Democratic</h1>
-        <h1 id="blue-h1" class="start-h1">Primary Election</h1>
-        <button id="start-button">Start</button>
+        <button id="back-button" link="index.html">
+            <img id="back-arrow" src="images/Back Arrow.png">
+            <p>Back</p>
+        </button>
+        <div id="start-h1">
+            <h1 id="black-h1" class="start-h1">NYC Democratic</h1>
+            <h1 id="blue-h1" class="start-h1">Primary Election</h1>
+        </div>
+        <a href="ballot.html"><button id="start-button">Start</button></a>
     </div>
     <div id="right">
-        <img id="ballot-doodle" src="images/sample.png">
+        <img id="ballot-doodle" src="images/Ballot Illustration.png">
         <h2 id="bold-h2">How the digital ballot works</h2>
-        <div id="instructions-div">
-            <p class="instructions">Rank up to 5 candidates on your ballot</p>
-            <p class="instructions">Select candidate name to reorder rank using up and down arrows</p>
-            <p class="instructions">Review your ballot then submit your votes</p>
-        </div>
+        <ul id="instructions-div">
+            <li class="instructions">Rank up to 5 candidates on your ballot</p>
+            <li class="instructions">Select candidate name to reorder rank <br>using up and down arrows</p>
+            <li class="instructions">Review your ballot then submit your votes</p>
+        </ul>
     </div>
-    <button id="help-button">???</button>
+    <button id="help-button">?</button>
 </body>
 
 </html>
