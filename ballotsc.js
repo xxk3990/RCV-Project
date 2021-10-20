@@ -333,7 +333,7 @@ function deleteItem() {
     buttonToDeselect.style.color = "black";
     itemList.splice(id, 1);
     showList();
-    buttonToDeselect.id = "";
+    buttonToDeselect.removeAttribute('id');
 }
 // up button
 function upButton() {
@@ -346,8 +346,8 @@ function upButton() {
         console.log(f);
         itemList.splice(parseId - 1, 0, f);
         this.id = parseId - 1;
-        buttonToDeselect.id = "";
-        buttonToDeselect.id = `b-${this.id}`;
+        buttonToDeselect.removeAttribute('id');
+        buttonToDeselect.setAttribute('id', `b-${parseId - 1}`);
     }
     showList();
 }
@@ -363,8 +363,8 @@ function downButton() {
         console.log(f);
         itemList.splice(parseId + 1, 0, f);
         this.id = parseId + 1;
-        buttonToDeselect.id = "";
-        buttonToDeselect.id = `b-${this.id}`;
+        buttonToDeselect.removeAttribute('id');
+        buttonToDeselect.setAttribute('id', `b-${parseId + 1}`);
     }
     showList();
 }
