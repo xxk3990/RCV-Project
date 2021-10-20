@@ -154,6 +154,15 @@
     margin-right: 25px;
 }
 
+.review {
+    float: center;
+    border: 1px solid black;
+    margin-right: 25px;
+    text-align: center;
+    margin-left: 500px;
+    margin-right: 500px;
+}
+
 .candidate-li {
     width: 860px;
     height: 80px;
@@ -200,7 +209,15 @@
     text-align: center;
 }
 
-
+.popupReview {
+    position: fixed;
+    border-style: solid;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 60px;
+    margin-left: 400px;
+    border-radius: 20px;
+}
 
 .popup .overlay{
     position: fixed;
@@ -208,19 +225,19 @@
     left: 0px;
     width: 100vw;
     height: 100vh;
-    background: rgba(59, 56, 56, .95);
+    background: white;
     z-index: 1;
     display: none;
   }
+
   .popup .content {
-    border-radius: 20px;
+
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    background-color: #efeeee;
-    width: 500px;
-    height: 650px;
+    transform: scale(0);
+    width: 1820px;
+    height: 960px;
     z-index: 2;
     text-align: center;
     padding: 20px;
@@ -233,13 +250,63 @@
     top: 10px;
     width: 30px;
     height: 30px;
-    background-color: rgba(59, 56, 56, 0.2);
     color: #fff;
     font-size: 25px;
     font-weight: 600;
     line-height: 25px;
     text-align: center;
-    border-radius: 50%;
+  }
+  .popupButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 22px 42px;
+    
+    position: absolute;
+    width: 140px;
+    height: 50px;
+    left: 900px;
+    top: 800px;
+    
+    /* Primary Blue */
+    
+    background: #3272E9;
+    border-radius: 16px;
+  }
+  .popupBackButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 22px 42px;
+    
+    position: absolute;
+    width: 140px;
+    height: 50px;
+    left: 50px;
+    top: 30px;
+    
+    background: #DFE2E6;
+    border-radius: 16px;
+  }
+  .reviewButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 22px 42px;
+    
+    position: absolute;
+    width: 140px;
+    height: 50px;
+    left: 1700px;
+    top: 30px;
+    
+    /* Primary Blue */
+    
+    background: #3272E9;
+    border-radius: 16px;
   }
   
   .popup.active .overlay {
@@ -256,6 +323,54 @@
     justify-content: space-around;
 }
 
+.languageButtons {
+    width: 500px;
+    float: center;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-row-gap: 24px;
+    grid-column-gap: 40px;
+    font-size: 20px;
+    grid-auto-flow: column;
+    position: relative;
+    left: 50%;
+    transform:translate(-70%, 0%);
+    margin-top: 20px;
+}
+.languageButtons h2{
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+}
+.langH1{
+    text-align: center;
+    font-size: 2em;
+}
+.langH3{
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 1.5em;
+}
+
+.candidate-btn2 {
+    position: relative;
+    transform:translate(-50%, 0%);
+    top: 10%;
+    left: 50%;
+    width: 330px;
+    height: 80px;
+    cursor: pointer;
+    border: 2px solid #3272E9;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-color: white;
+}
+.candidate-btn2:focus {
+    background-color: #446CD1;
+    color: white;
+}
 /* body {
     background-color: #13268b;
     background-image: url("images/texture.png");
