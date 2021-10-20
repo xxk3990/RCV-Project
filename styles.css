@@ -313,6 +313,51 @@ section.up-down button {
     justify-content: space-around;
 }
 
+.languageButtons {
+    width: 500px;
+    float: center;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-row-gap: 24px;
+    grid-column-gap: 40px;
+    font-size: 20px;
+    grid-auto-flow: column;
+    position: relative;
+    left: 50%;
+    transform:translate(-70%, 0%);
+    margin-top: 20px;
+}
+.languageButtons h2{
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+}
+.langH1{
+    text-align: center;
+}
+.langH3{
+    text-align: center;
+}
+
+.candidate-btn2 {
+    position: relative;
+    transform:translate(-50%, 0%);
+    top: 50%;
+    left: 50%;
+    width: 330px;
+    height: 80px;
+    cursor: pointer;
+    border: 2px solid #3272E9;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-color: white;
+}
+.candidate-btn2:focus {
+    background-color: #446CD1;
+    color: white;
+}
 /* body {
     background-color: #13268b;
     background-image: url("images/texture.png");
