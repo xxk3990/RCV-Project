@@ -28,10 +28,19 @@ let button14 = document.querySelector(".button14");
 button14.addEventListener("click", button14F);
 
 function togglePopup() {
+    if(itemList.length > 0){
     document.querySelector("#popup-1").classList.toggle("active");
-
-    document.querySelector(".candidateList-popup").innerHTML = itemList;
-
+    let list = "<ol id = 'candidate-list'>"
+    for (let i = 0; i <itemList.length; i++) {
+        list += `<li class = 'candidate-li'><span class = 'candidate-name'>${itemList[i]}</span></li>
+        `;
+    }
+    list += '</ol>'
+    document.querySelector(".candidateList-popup").innerHTML = list;
+    }
+    else{
+        alert("Choose at least one candidate.");
+    }
 }
 
 //let candidateLi = document.querySelectorAll("#candidate-list li");
