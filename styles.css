@@ -336,15 +336,18 @@ section.up-down button {
 }
 .langH1{
     text-align: center;
+    font-size: 2em;
 }
 .langH3{
     text-align: center;
+    margin-bottom: 50px;
+    font-size: 1.5em;
 }
 
 .candidate-btn2 {
     position: relative;
     transform:translate(-50%, 0%);
-    top: 50%;
+    top: 10%;
     left: 50%;
     width: 330px;
     height: 80px;
