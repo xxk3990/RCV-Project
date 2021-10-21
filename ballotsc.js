@@ -362,19 +362,14 @@ function deleteItem() {
         btd8.setAttribute('id', `b-${2}`);
         const btd9 = candidateButtons.querySelector(`#b-${4}`);
         btd9.setAttribute('id', `b-${3}`);
-        // const buttonToDeselect4 = candidateButtons.querySelector(`#b-${4}`);
-        // buttonToDeselect4.setAttribute('id', `b-${3}`);
+
     }
     if(parseId == 3){
         const btd10 = candidateButtons.querySelector(`#b-${4}`);
         btd10.setAttribute('id', `b-${3}`);
-        // const buttonToDeselect6 = candidateButtons.querySelector(`#b-${4}`);
-        // buttonToDeselect6.setAttribute('id', `b-${3}`);
-        // const buttonToDeselect4 = candidateButtons.querySelector(`#b-${4}`);
-        // buttonToDeselect4.setAttribute('id', `b-${3}`);
+
     }
-    // const buttonToDeselect2 = candidateButtons.querySelector(`#b-${temp+1}`);
-    // buttonToDeselect2.setAttribute('id', `b-${0}`);
+
 
     
 
@@ -390,8 +385,8 @@ function upButton() {
         //console.log(f);
         itemList.splice(parseId - 1, 0, f);
         this.id = parseId - 1;
-        //buttonToDeselect.removeAttribute('id');
-        //buttonToDeselect.setAttribute('id', `b-${parseId - 1}`);
+        buttonToDeselect.removeAttribute('id');
+        buttonToDeselect.setAttribute('id', `b-${parseId - 1}`);
     }
     showList();
 }
@@ -407,8 +402,8 @@ function downButton() {
         //console.log(f);
         itemList.splice(parseId + 1, 0, f);
         this.id = parseId + 1;
-        //buttonToDeselect.removeAttribute('id');
-        //buttonToDeselect.setAttribute('id', `b-${parseId + 1}`);
+        buttonToDeselect.removeAttribute('id');
+        buttonToDeselect.setAttribute('id', `b-${parseId + 1}`);
     }
     showList();
 }
