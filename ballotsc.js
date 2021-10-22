@@ -300,16 +300,18 @@ function showList() {
         cName.onclick = () => {
             deleteButtons.forEach(db => {
                 const upDown = allLi[i].querySelector(".up-down");
-                allLi[i].classList.add('selected');
+                const section = allLi[i].querySelector('.candidate-data');
+                section.classList.add('selected');
                 upDown.classList.add('up-down-visible');
                 db.classList.add('close-white');
                 showArrows(deleteButtons)
                 let otherCandidates = [...allLi].filter(arr => [...allLi].indexOf(arr) !== i);
                 otherCandidates.forEach(oc => {
+                    const otherSections = oc.querySelector('.candidate-data')
                     const otherArrows = oc.querySelector('.up-down');
                     const otherDeletes = oc.querySelector('.close');
-                    if(oc.classList.contains('selected')) {
-                        oc.classList.remove('selected');
+                    if(otherSections.classList.contains('selected')) {
+                        otherSections.classList.remove('selected');
                     }
                     if(otherArrows.classList.contains('up-down-visible')) {
                         otherArrows.classList.remove('up-down-visible');
