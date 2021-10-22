@@ -28,17 +28,16 @@ let button14 = document.querySelector(".button14");
 button14.addEventListener("click", button14F);
 
 function togglePopup() {
-    if(itemList.length > 0){
-    document.querySelector("#popup-1").classList.toggle("active");
-    let list = "<ol id = 'candidate-list'>"
-    for (let i = 0; i <itemList.length; i++) {
-        list += `<li class = 'candidate-li'><span class = 'candidate-name'>${itemList[i]}</span></li>
+    if (itemList.length > 0) {
+        document.querySelector("#popup-1").classList.toggle("active");
+        let list = "<ol id = 'candidate-list'>"
+        for (let i = 0; i < itemList.length; i++) {
+            list += `<li class = 'candidate-li'><section class = 'candidate-data'><span class = 'candidate-name'>${itemList[i]}</span></section></li>
         `;
-    }
-    list += '</ol>'
-    document.querySelector(".candidateList-popup").innerHTML = list;
-    }
-    else{
+        }
+        list += '</ol>'
+        document.querySelector(".candidateList-popup").innerHTML = list;
+    } else {
         alert("Choose at least one candidate.");
     }
 }
@@ -72,7 +71,7 @@ function button2F() {
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
-            this.id = `b-${itemList.indexOf(item).toString()}`;
+            //  this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -88,7 +87,7 @@ function button3F() {
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
-            this.id = `b-${itemList.indexOf(item).toString()}`;
+            //  this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -104,7 +103,7 @@ function button4F() {
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
-            this.id = `b-${itemList.indexOf(item).toString()}`;
+            // this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -120,7 +119,7 @@ function button5F() {
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
-            this.id = `b-${itemList.indexOf(item).toString()}`;
+            // this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -136,7 +135,7 @@ function button6F() {
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
-            this.id = `b-${itemList.indexOf(item).toString()}`;
+            // this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -152,7 +151,7 @@ function button7F() {
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
-            this.id = `b-${itemList.indexOf(item).toString()}`;
+            // this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -168,7 +167,7 @@ function button8F() {
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
-            this.id = `b-${itemList.indexOf(item).toString()}`;
+            //this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -184,7 +183,7 @@ function button9F() {
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
-            this.id = `b-${itemList.indexOf(item).toString()}`;
+            // this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -200,7 +199,7 @@ function button10F() {
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
-            this.id = `b-${itemList.indexOf(item).toString()}`;
+            //this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -216,7 +215,7 @@ function button11F() {
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
-            this.id = `b-${itemList.indexOf(item).toString()}`;
+            //this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -232,7 +231,7 @@ function button12F() {
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
-            this.id = `b-${itemList.indexOf(item).toString()}`;
+            //this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -248,7 +247,7 @@ function button13F() {
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
-            this.id = `b-${itemList.indexOf(item).toString()}`;
+            // this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -264,7 +263,7 @@ function button14F() {
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
-            this.id = `b-${itemList.indexOf(item).toString()}`;
+            // this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -275,8 +274,8 @@ let id;
 function showList() {
     let list = "<ul id = 'candidate-list'>"
     for (let i = 0; i < itemList.length; i++) {
-        list += `<li class = 'candidate-li'><span class = 'candidate-name'>${itemList[i]}</span><section class = "up-down"><section class = "up-down-btns"><button type="button" class="upButton" value="up" id='${i}'>&#x25B2;</button>
-        <button type="button" class="downButton" value="down" id='${i}'">&#x25BC;</button></section></section><span class='close' id='${i}'>&times;</span></li>
+        list += `<li class = 'candidate-li'><section class = 'candidate-data'><span class = 'candidate-name'>${itemList[i]}</span><section class = "up-down"><section class = "up-down-btns"><button type="button" class="upButton" value="up" id='${i}'>&#x25B2;</button>
+        <button type="button" class="downButton" value="down" id='${i}'">&#x25BC;</button></section></section><span class='close' id='${i}'>&times;</span></section></li>
         `;
     }
     list += '</ul>'
@@ -285,46 +284,93 @@ function showList() {
     //  candidateList.appendChild(candidateLi);
     let deleteButtons = document.querySelectorAll(".close");
     for (let i = 0; i < deleteButtons.length; i++) {
-        deleteButtons[i].addEventListener("click", deleteItem);
+        const li = deleteButtons[i].parentElement;
+        deleteButtons[i].onclick = () => {
+            li.classList.add('delete-animation');
+        }
+        li.ontransitionend = () => {
+            deleteItem(deleteButtons[i]);
+            li.classList.remove('delete-animation');
+        }
     }
     // down buttons
-    const allLi = document.querySelectorAll(".candidate-li");
-
+    const allLi = document.querySelectorAll('.candidate-li');
     for (let i = 0; i < allLi.length; i++) {
-        allLi[i].onclick = () => {
+        const cName = allLi[i].querySelector(".candidate-name");
+        cName.onclick = () => {
             deleteButtons.forEach(db => {
-                showArrows(allLi[i], deleteButtons, db)
-                //let otherCandidates = [...allLi].filter(arr => [...allLi].indexOf(arr) !== i);
-                //otherCandidates.forEach(oc => {
-                //    oc.classList.add('disabled')
-                //})
+                const upDown = allLi[i].querySelector(".up-down");
+                const section = allLi[i].querySelector('.candidate-data');
+                section.classList.add('selected');
+                allLi[i].classList.add('candidate-selected');
+                upDown.classList.add('up-down-visible');
+                db.classList.add('close-white');
+                upArrows(deleteButtons, db);
+                downArrows(deleteButtons)
+                let otherCandidates = [...allLi].filter(arr => [...allLi].indexOf(arr) !== i);
+                otherCandidates.forEach(oc => {
+                    const otherSections = oc.querySelector('.candidate-data')
+                    const otherArrows = oc.querySelector('.up-down');
+                    const otherDeletes = oc.querySelector('.close');
+                    if(oc.classList.contains('candidate-selected')) {
+                        oc.classList.remove('candidate-selected');
+                    }
+                    if(otherSections.classList.contains('selected')) {
+                        otherSections.classList.remove('selected');
+                    }
+                    if(otherArrows.classList.contains('up-down-visible')) {
+                        otherArrows.classList.remove('up-down-visible');
+                    }
+                    if(otherDeletes.classList.contains('close-white')) {
+                        otherDeletes.classList.remove('close-white')
+                    }
+                })
             });
         }
     }
     // up buttons
 }
 
-function showArrows(listItem, deleteButtons, closeBtn) {
-    const upDown = listItem.querySelector(".up-down");
-    upDown.style.display = "block";
-    upDown.style.float = "right";
-    listItem.style.backgroundColor = "#3272E9";
-    listItem.style.color = "white";
-    closeBtn.style.color = "white";
-    closeBtn.style.marginRight = "30px";
+function upArrows(deleteButtons) {
     let upButtons = document.querySelectorAll(".upButton");
     for (let i = 0; i < deleteButtons.length; i++) {
-        upButtons[i].addEventListener('click', upButton);
+        let li = deleteButtons[i].parentElement;
+        upButtons[i].onclick = () => {
+            upButton(upButtons[i])
+           // li.classList.add('up-animation');
+        }
+        // li.ontransitionend = () => {
+        //     upButton(upButtons[i])
+        //     li.classList.remove('up-animation');
+        // }
+        
     }
+}
+
+function downArrows(deleteButtons) {
     let downButtons = document.querySelectorAll('.downButton');
     for (let i = 0; i < deleteButtons.length; i++) {
-        downButtons[i].addEventListener('click', downButton);
+        let li = deleteButtons[i].parentElement;
+        downButtons[i].onclick = () => {
+            downButton(downButtons[i])
+          //  li.classList.add('down-animation');
+        }
+        // li.ontransitionend = () => {
+        //     downButton(downButtons[i])
+        //     li.classList.remove('down-animation');
+        // }
     }
 
 }
+    
+
+    //  const candidateButtons = document.querySelector(".candidateButtons");
+    //  const buttonToDeselect = candidateButtons.querySelector(`#b-${id}`);
+    //  buttonToDeselect.style.backgroundColor = "white";
+    // buttonToDeselect.style.color = "black";
 
 function deleteItem() {
-    let id = this.getAttribute("id");
+    let id = deleteBtn.getAttribute("id");
     console.log(id);
     let parseId = parseInt(id);
     const candidateButtons = document.querySelector(".candidateButtons");
@@ -334,6 +380,7 @@ function deleteItem() {
     buttonToDeselect.style.backgroundColor = "white";
     buttonToDeselect.style.color = "black";
     itemList.splice(id, 1);
+    console.log(itemList);
     showList();
     buttonToDeselect.removeAttribute('id');
     // const buttonToDeselect2 = candidateButtons.querySelector(`#b-${parseId+1}`);
@@ -376,8 +423,9 @@ function deleteItem() {
 
 }
 // up button
-function upButton() {
-    let id = this.getAttribute('id');
+function upButton(upBtn) {
+    let id = upBtn.getAttribute('id');
+    console.log(upBtn);
     let parseId = parseInt(id);
     let f = itemList.splice(parseId, 1)[0];
     if (parseId <= itemList.length) {
@@ -385,16 +433,16 @@ function upButton() {
         const buttonToDeselect = candidateButtons.querySelector(`#b-${id}`);
         //console.log(f);
         itemList.splice(parseId - 1, 0, f);
-        this.id = parseId - 1;
-        buttonToDeselect.removeAttribute('id');
-        buttonToDeselect.setAttribute('id', `b-${parseId - 1}`);
+        upBtn.id = parseId - 1;
+        // buttonToDeselect.removeAttribute('id');
+        // buttonToDeselect.setAttribute('id', `b-${parseId - 1}`);
     }
     showList();
 }
 
 // down button
-function downButton() {
-    let id = this.getAttribute('id');
+function downButton(downBtn) {
+    let id = downBtn.getAttribute('id');
     let parseId = parseInt(id);
     let f = itemList.splice(parseId, 1)[0];
     if (parseId <= itemList.length) {
@@ -402,9 +450,9 @@ function downButton() {
         const buttonToDeselect = candidateButtons.querySelector(`#b-${id}`);
         //console.log(f);
         itemList.splice(parseId + 1, 0, f);
-        this.id = parseId + 1;
-        buttonToDeselect.removeAttribute('id');
-        buttonToDeselect.setAttribute('id', `b-${parseId + 1}`);
+        downBtn.id = parseId + 1;
+        //   buttonToDeselect.removeAttribute('id');
+        // buttonToDeselect.setAttribute('id', `b-${parseId + 1}`);
     }
     showList();
 }

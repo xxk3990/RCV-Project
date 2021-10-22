@@ -89,6 +89,7 @@
     display: inline-block;
 }
 
+
 .candidateButtons {
     width: 500px;
     float: left;
@@ -157,18 +158,59 @@
     margin-right: 500px;
 }
 
-.candidate-li {
-    width: 860px;
+.candidate-data {
+    width: 780px;
     height: 80px;
     border-radius: 20px;
     border: 1px solid black;
     text-align: center;
     margin-bottom: 15px;
-    cursor: pointer;
+    transform: translateX(0);
 }
 
-.disabled {
-    pointer-events: none;
+.candidate-li {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.delete-animation {
+    transform: translateX(900px);
+    transition: all 0.6s ease-out;
+}
+
+.up-animation {
+    transform: translateY(-100px);
+    transition: all 0.6s ease-out;
+    z-index: 1;
+    position: relative;
+}
+
+.down-animation {
+    transform: translateY(100px);
+    transition: all 0.6s ease-out;
+    z-index: 1;
+    position: relative;
+}
+
+.selected {
+    background-color: #3272E9;
+    color: white;
+}
+
+.candidate-selected::before {
+    color: white;
+    background: #3272E9;
+    border: 1px solid #3272E9;
+}
+
+.up-down-visible {
+    display: block;
+    float: right;
+}
+.close-white {
+    color: white;
+    margin-right: 30px;
 }
 
 #candidate-list {
@@ -178,25 +220,34 @@
     counter-reset: list-numbers;
     list-style-type: none;
     font-size: 20px;
+    list-style-position: outside;
+    height: 100%;
 }
 
-#candidate-list li:before {
+.candidate-li::before {
     counter-increment: list-numbers;
     content: counter(list-numbers);
-    color: white;
-    background: #446CD1;
+    border: 1px solid black;
     border-radius: 50%;
-    min-width: 60px;
-    min-height: 60px;
+    height: 50px;
+    width: 30px;
     font-size: 32px;
     padding-left: 10px;
     padding-right: 10px;
-    margin-right: 20px;
+    margin-right: 10px;
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 7px;
 }
 
 
 .candidate-name {
     padding-top: 15px;
+}
+
+.candidate-name:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 #ballot-instructions {
