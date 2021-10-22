@@ -450,6 +450,14 @@
     background-color: #3272E9;
     color: white;
 }
+
+#back-button {
+    width: 144px;
+    height: 53px;
+    font-size: 20px;
+    border-radius: 16px;
+    cursor: pointer;
+}
 /* body {
     background-color: #13268b;
     background-image: url("images/texture.png");
