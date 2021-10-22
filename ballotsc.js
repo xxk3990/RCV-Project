@@ -53,8 +53,8 @@ function button1F() {
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
-            console.log(itemList.indexOf(item));
-            //  this.id = `b-${itemList.indexOf(item).toString()}`;
+            //console.log(itemList.indexOf(item));
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -270,7 +270,7 @@ function button14F() {
     showList();
 }
 
-
+let id;
 function showList() {
     let list = "<ul id = 'candidate-list'>"
     for (let i = 0; i < itemList.length; i++) {
@@ -327,10 +327,7 @@ function showList() {
                 })
             });
         }
-
-
     }
-
     // up buttons
 }
 
@@ -363,22 +360,67 @@ function downArrows(deleteButtons) {
         //     li.classList.remove('down-animation');
         // }
     }
-}
 
-function deleteItem(deleteBtn) {
-    let id = deleteBtn.getAttribute("id");
+}
+    
 
     //  const candidateButtons = document.querySelector(".candidateButtons");
     //  const buttonToDeselect = candidateButtons.querySelector(`#b-${id}`);
     //  buttonToDeselect.style.backgroundColor = "white";
     // buttonToDeselect.style.color = "black";
 
+function deleteItem() {
+    let id = deleteBtn.getAttribute("id");
+    console.log(id);
+    let parseId = parseInt(id);
+    const candidateButtons = document.querySelector(".candidateButtons");
+    const buttonToDeselect = candidateButtons.querySelector(`#b-${id}`);
+
+    //console.log(buttonToDeselect.id);
+    buttonToDeselect.style.backgroundColor = "white";
+    buttonToDeselect.style.color = "black";
     itemList.splice(id, 1);
     console.log(itemList);
     showList();
-    //deleteBtn.classList.remove('delete-animation');
+    buttonToDeselect.removeAttribute('id');
+    // const buttonToDeselect2 = candidateButtons.querySelector(`#b-${parseId+1}`);
+    // buttonToDeselect2.setAttribute('id', `b-${parseId}`);
 
-    // buttonToDeselect.removeAttribute('id');
+    if(parseId == 0){
+        const btd1 = candidateButtons.querySelector(`#b-${1}`);
+        btd1.setAttribute('id', `b-${0}`);
+        const btd2 = candidateButtons.querySelector(`#b-${2}`);
+        btd2.setAttribute('id', `b-${1}`);
+        const btd3 = candidateButtons.querySelector(`#b-${3}`);
+        btd3.setAttribute('id', `b-${2}`);
+        const btd4 = candidateButtons.querySelector(`#b-${4}`);
+        btd4.setAttribute('id', `b-${3}`);
+    }
+
+    if(parseId == 1){
+        const btd5 = candidateButtons.querySelector(`#b-${2}`);
+        btd5.setAttribute('id', `b-${1}`);
+        const btd6 = candidateButtons.querySelector(`#b-${3}`);
+        btd6.setAttribute('id', `b-${2}`);
+        const btd7 = candidateButtons.querySelector(`#b-${4}`);
+        btd7.setAttribute('id', `b-${3}`);
+    }
+    if(parseId == 2){
+        const btd8 = candidateButtons.querySelector(`#b-${3}`);
+        btd8.setAttribute('id', `b-${2}`);
+        const btd9 = candidateButtons.querySelector(`#b-${4}`);
+        btd9.setAttribute('id', `b-${3}`);
+
+    }
+    if(parseId == 3){
+        const btd10 = candidateButtons.querySelector(`#b-${4}`);
+        btd10.setAttribute('id', `b-${3}`);
+
+    }
+
+
+    
+
 }
 // up button
 function upButton(upBtn) {
@@ -387,9 +429,9 @@ function upButton(upBtn) {
     let parseId = parseInt(id);
     let f = itemList.splice(parseId, 1)[0];
     if (parseId <= itemList.length) {
-        //   const candidateButtons = document.querySelector(".candidateButtons");
-        //   const buttonToDeselect = candidateButtons.querySelector(`#b-${id}`);
-        console.log(f);
+        const candidateButtons = document.querySelector(".candidateButtons");
+        const buttonToDeselect = candidateButtons.querySelector(`#b-${id}`);
+        //console.log(f);
         itemList.splice(parseId - 1, 0, f);
         upBtn.id = parseId - 1;
         // buttonToDeselect.removeAttribute('id');
@@ -404,9 +446,9 @@ function downButton(downBtn) {
     let parseId = parseInt(id);
     let f = itemList.splice(parseId, 1)[0];
     if (parseId <= itemList.length) {
-        //    const candidateButtons = document.querySelector(".candidateButtons");
-        //   const buttonToDeselect = candidateButtons.querySelector(`#b-${id}`);
-        console.log(f);
+        const candidateButtons = document.querySelector(".candidateButtons");
+        const buttonToDeselect = candidateButtons.querySelector(`#b-${id}`);
+        //console.log(f);
         itemList.splice(parseId + 1, 0, f);
         downBtn.id = parseId + 1;
         //   buttonToDeselect.removeAttribute('id');
