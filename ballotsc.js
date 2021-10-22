@@ -32,7 +32,7 @@ function togglePopup() {
         document.querySelector("#popup-1").classList.toggle("active");
         let list = "<ol id = 'candidate-list'>"
         for (let i = 0; i < itemList.length; i++) {
-            list += `<li class = 'candidate-li'><span class = 'candidate-name'>${itemList[i]}</span></li>
+            list += `<li class = 'candidate-li'><section class = 'candidate-data'><span class = 'candidate-name'>${itemList[i]}</span></section></li>
         `;
         }
         list += '</ol>'
