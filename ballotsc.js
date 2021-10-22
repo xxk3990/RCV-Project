@@ -436,6 +436,35 @@ function upButton(upBtn) {
         upBtn.id = parseId - 1;
         // buttonToDeselect.removeAttribute('id');
         // buttonToDeselect.setAttribute('id', `b-${parseId - 1}`);
+        if(parseId == 1){
+            const btda = candidateButtons.querySelector(`#b-${0}`);
+            const btdb = candidateButtons.querySelector(`#b-${1}`);
+
+            btda.setAttribute('id', `b-${1}`);
+            btdb.setAttribute('id', `b-${0}`);
+        }
+        if(parseId == 2){
+            const btda = candidateButtons.querySelector(`#b-${1}`);
+            const btdb = candidateButtons.querySelector(`#b-${2}`);
+
+            btda.setAttribute('id', `b-${2}`);
+            btdb.setAttribute('id', `b-${1}`);
+        }
+
+        if(parseId == 3){
+            const btda = candidateButtons.querySelector(`#b-${2}`);
+            const btdb = candidateButtons.querySelector(`#b-${3}`);
+
+            btda.setAttribute('id', `b-${3}`);
+            btdb.setAttribute('id', `b-${2}`);
+        }
+        if(parseId == 4){
+            const btda = candidateButtons.querySelector(`#b-${3}`);
+            const btdb = candidateButtons.querySelector(`#b-${4}`);
+
+            btda.setAttribute('id', `b-${4}`);
+            btdb.setAttribute('id', `b-${3}`);
+        }
     }
     showList();
 }
@@ -453,6 +482,37 @@ function downButton(downBtn) {
         downBtn.id = parseId + 1;
         //   buttonToDeselect.removeAttribute('id');
         // buttonToDeselect.setAttribute('id', `b-${parseId + 1}`);
+        if(parseId == 0){
+            const btda = candidateButtons.querySelector(`#b-${1}`);
+            const btdb = candidateButtons.querySelector(`#b-${0}`);
+
+            btda.setAttribute('id', `b-${0}`);
+            btdb.setAttribute('id', `b-${1}`);
+        }
+
+        
+        if(parseId == 1){
+            const btda = candidateButtons.querySelector(`#b-${2}`);
+            const btdb = candidateButtons.querySelector(`#b-${1}`);
+
+            btda.setAttribute('id', `b-${1}`);
+            btdb.setAttribute('id', `b-${2}`);
+        }
+
+        if(parseId == 2){
+            const btda = candidateButtons.querySelector(`#b-${3}`);
+            const btdb = candidateButtons.querySelector(`#b-${2}`);
+
+            btda.setAttribute('id', `b-${2}`);
+            btdb.setAttribute('id', `b-${3}`);
+        }
+        if(parseId == 3){
+            const btda = candidateButtons.querySelector(`#b-${4}`);
+            const btdb = candidateButtons.querySelector(`#b-${3}`);
+
+            btda.setAttribute('id', `b-${3}`);
+            btdb.setAttribute('id', `b-${4}`);
+        }
     }
     showList();
 }
