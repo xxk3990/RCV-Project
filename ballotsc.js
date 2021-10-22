@@ -71,7 +71,7 @@ function button2F() {
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
-            //  this.id = `b-${itemList.indexOf(item).toString()}`;
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -87,7 +87,7 @@ function button3F() {
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
-            //  this.id = `b-${itemList.indexOf(item).toString()}`;
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -103,7 +103,7 @@ function button4F() {
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
-            // this.id = `b-${itemList.indexOf(item).toString()}`;
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -119,7 +119,7 @@ function button5F() {
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
-            // this.id = `b-${itemList.indexOf(item).toString()}`;
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -135,7 +135,7 @@ function button6F() {
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
-            // this.id = `b-${itemList.indexOf(item).toString()}`;
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -151,7 +151,7 @@ function button7F() {
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
-            // this.id = `b-${itemList.indexOf(item).toString()}`;
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -167,7 +167,7 @@ function button8F() {
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
-            //this.id = `b-${itemList.indexOf(item).toString()}`;
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -183,7 +183,7 @@ function button9F() {
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
-            // this.id = `b-${itemList.indexOf(item).toString()}`;
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -199,7 +199,7 @@ function button10F() {
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
-            //this.id = `b-${itemList.indexOf(item).toString()}`;
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -215,7 +215,7 @@ function button11F() {
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
-            //this.id = `b-${itemList.indexOf(item).toString()}`;
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -231,7 +231,7 @@ function button12F() {
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
-            //this.id = `b-${itemList.indexOf(item).toString()}`;
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -247,7 +247,7 @@ function button13F() {
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
-            // this.id = `b-${itemList.indexOf(item).toString()}`;
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -263,7 +263,7 @@ function button14F() {
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
-            // this.id = `b-${itemList.indexOf(item).toString()}`;
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -369,7 +369,7 @@ function downArrows(deleteButtons) {
     //  buttonToDeselect.style.backgroundColor = "white";
     // buttonToDeselect.style.color = "black";
 
-function deleteItem() {
+function deleteItem(deleteBtn) {
     let id = deleteBtn.getAttribute("id");
     console.log(id);
     let parseId = parseInt(id);
