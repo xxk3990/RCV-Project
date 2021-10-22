@@ -305,7 +305,8 @@ function showList() {
                 allLi[i].classList.add('candidate-selected');
                 upDown.classList.add('up-down-visible');
                 db.classList.add('close-white');
-                showArrows(deleteButtons)
+                upArrows(deleteButtons, db);
+                downArrows(deleteButtons)
                 let otherCandidates = [...allLi].filter(arr => [...allLi].indexOf(arr) !== i);
                 otherCandidates.forEach(oc => {
                     const otherSections = oc.querySelector('.candidate-data')
@@ -333,25 +334,34 @@ function showList() {
     // up buttons
 }
 
-function showArrows(deleteButtons) {
+function upArrows(deleteButtons) {
     let upButtons = document.querySelectorAll(".upButton");
     for (let i = 0; i < deleteButtons.length; i++) {
+        let li = deleteButtons[i].parentElement;
         upButtons[i].onclick = () => {
-            window.setTimeout(function () {
-                upButton(upButtons[i])
-            }, 950)
-        };
+            upButton(upButtons[i])
+           // li.classList.add('up-animation');
+        }
+        // li.ontransitionend = () => {
+        //     upButton(upButtons[i])
+        //     li.classList.remove('up-animation');
+        // }
+        
     }
+}
+
+function downArrows(deleteButtons) {
     let downButtons = document.querySelectorAll('.downButton');
     for (let i = 0; i < deleteButtons.length; i++) {
-
+        let li = deleteButtons[i].parentElement;
         downButtons[i].onclick = () => {
-            window.setTimeout(function () {
-                downButton(downButtons[i]);
-            }, 950)
+            downButton(downButtons[i])
+          //  li.classList.add('down-animation');
         }
-
-
+        // li.ontransitionend = () => {
+        //     downButton(downButtons[i])
+        //     li.classList.remove('down-animation');
+        // }
     }
 }
 
@@ -373,6 +383,7 @@ function deleteItem(deleteBtn) {
 // up button
 function upButton(upBtn) {
     let id = upBtn.getAttribute('id');
+    console.log(upBtn);
     let parseId = parseInt(id);
     let f = itemList.splice(parseId, 1)[0];
     if (parseId <= itemList.length) {
