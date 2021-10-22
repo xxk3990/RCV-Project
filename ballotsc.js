@@ -50,6 +50,8 @@ function button1F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const reviewBtn = document.querySelector(".postButton");
+            reviewBtn.classList.add('submit-btn');
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
@@ -68,6 +70,8 @@ function button2F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const reviewBtn = document.querySelector(".postButton");
+            reviewBtn.classList.add('submit-btn');
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
@@ -84,6 +88,8 @@ function button3F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const reviewBtn = document.querySelector(".postButton");
+            reviewBtn.classList.add('submit-btn');
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
@@ -100,6 +106,8 @@ function button4F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const reviewBtn = document.querySelector(".postButton");
+            reviewBtn.classList.add('submit-btn');
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
@@ -116,6 +124,8 @@ function button5F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const reviewBtn = document.querySelector(".postButton");
+            reviewBtn.classList.add('submit-btn');
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
@@ -132,6 +142,8 @@ function button6F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const reviewBtn = document.querySelector(".postButton");
+            reviewBtn.classList.add('submit-btn');
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
@@ -148,6 +160,8 @@ function button7F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const reviewBtn = document.querySelector(".postButton");
+            reviewBtn.classList.add('submit-btn');
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
@@ -164,6 +178,8 @@ function button8F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const reviewBtn = document.querySelector(".postButton");
+            reviewBtn.classList.add('submit-btn');
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
@@ -180,6 +196,8 @@ function button9F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const reviewBtn = document.querySelector(".postButton");
+            reviewBtn.classList.add('submit-btn');
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
@@ -196,6 +214,8 @@ function button10F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const reviewBtn = document.querySelector(".postButton");
+            reviewBtn.classList.add('submit-btn');
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
@@ -212,6 +232,8 @@ function button11F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const reviewBtn = document.querySelector(".postButton");
+            reviewBtn.classList.add('submit-btn');
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
@@ -228,6 +250,8 @@ function button12F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const reviewBtn = document.querySelector(".postButton");
+            reviewBtn.classList.add('submit-btn');
             itemList.push(item);
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
@@ -381,6 +405,11 @@ function deleteItem(deleteBtn) {
     buttonToDeselect.style.color = "black";
     itemList.splice(id, 1);
     console.log(itemList);
+    const reviewBtn = document.querySelector(".postButton");
+   
+    if(itemList.length === 0 && reviewBtn.classList.contains('submit-btn')) {
+        reviewBtn.classList.remove('submit-btn');
+    }
     showList();
     buttonToDeselect.removeAttribute('id');
     // const buttonToDeselect2 = candidateButtons.querySelector(`#b-${parseId+1}`);
