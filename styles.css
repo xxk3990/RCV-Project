@@ -108,11 +108,9 @@
     cursor: pointer;
     border-radius: 20px;
     background-color: white;
-}
-
-.candidate-btn:focus {
-    background-color: #446CD1;
-    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: normal;
+    font-size: 20px;
 }
 
 .close {
@@ -167,6 +165,10 @@
     text-align: center;
     margin-bottom: 15px;
     cursor: pointer;
+}
+
+.disabled {
+    pointer-events: none;
 }
 
 #candidate-list {
