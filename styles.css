@@ -420,6 +420,23 @@
     background-color: #446CD1;
     color: white;
 }
+.postButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 22px 42px;
+
+    width: 194px;
+    height: 83px;
+    float: right;
+
+/* Light Grey */
+
+border: 2px solid #D5DEED;
+box-sizing: border-box;
+border-radius: 16px;
+}
 /* body {
     background-color: #13268b;
     background-image: url("images/texture.png");
