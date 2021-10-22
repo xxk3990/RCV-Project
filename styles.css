@@ -89,6 +89,7 @@
     display: inline-block;
 }
 
+
 .candidateButtons {
     width: 500px;
     float: left;
@@ -164,11 +165,27 @@
     border: 1px solid black;
     text-align: center;
     margin-bottom: 15px;
-    cursor: pointer;
+    transform: translateX(0);
 }
 
-.disabled {
-    pointer-events: none;
+
+.delete-animation {
+    transform: translateX(900px);
+    transition: all 0.6s ease-out;
+}
+
+.selected {
+    background-color: #3272E9;
+    color: white;
+}
+
+.up-down-visible {
+    display: block;
+    float: right;
+}
+.close-white {
+    color: white;
+    margin-right: 30px;
 }
 
 #candidate-list {
@@ -197,6 +214,11 @@
 
 .candidate-name {
     padding-top: 15px;
+}
+
+.candidate-name:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 #ballot-instructions {
