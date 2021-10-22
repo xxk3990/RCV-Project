@@ -28,17 +28,16 @@ let button14 = document.querySelector(".button14");
 button14.addEventListener("click", button14F);
 
 function togglePopup() {
-    if(itemList.length > 0){
-    document.querySelector("#popup-1").classList.toggle("active");
-    let list = "<ol id = 'candidate-list'>"
-    for (let i = 0; i <itemList.length; i++) {
-        list += `<li class = 'candidate-li'><span class = 'candidate-name'>${itemList[i]}</span></li>
+    if (itemList.length > 0) {
+        document.querySelector("#popup-1").classList.toggle("active");
+        let list = "<ol id = 'candidate-list'>"
+        for (let i = 0; i < itemList.length; i++) {
+            list += `<li class = 'candidate-li'><section class = 'candidate-data'><span class = 'candidate-name'>${itemList[i]}</span></section></li>
         `;
-    }
-    list += '</ol>'
-    document.querySelector(".candidateList-popup").innerHTML = list;
-    }
-    else{
+        }
+        list += '</ol>'
+        document.querySelector(".candidateList-popup").innerHTML = list;
+    } else {
         alert("Choose at least one candidate.");
     }
 }
@@ -51,7 +50,13 @@ function button1F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const reviewBtn = document.querySelector(".postButton");
+            reviewBtn.classList.add('submit-btn');
             itemList.push(item);
+            this.style.backgroundColor = "#446CD1";
+            this.style.color = "white";
+            //console.log(itemList.indexOf(item));
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -65,7 +70,12 @@ function button2F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const reviewBtn = document.querySelector(".postButton");
+            reviewBtn.classList.add('submit-btn');
             itemList.push(item);
+            this.style.backgroundColor = "#446CD1";
+            this.style.color = "white";
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -78,7 +88,12 @@ function button3F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const reviewBtn = document.querySelector(".postButton");
+            reviewBtn.classList.add('submit-btn');
             itemList.push(item);
+            this.style.backgroundColor = "#446CD1";
+            this.style.color = "white";
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -91,7 +106,12 @@ function button4F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const reviewBtn = document.querySelector(".postButton");
+            reviewBtn.classList.add('submit-btn');
             itemList.push(item);
+            this.style.backgroundColor = "#446CD1";
+            this.style.color = "white";
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -104,7 +124,12 @@ function button5F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const reviewBtn = document.querySelector(".postButton");
+            reviewBtn.classList.add('submit-btn');
             itemList.push(item);
+            this.style.backgroundColor = "#446CD1";
+            this.style.color = "white";
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -117,7 +142,12 @@ function button6F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const reviewBtn = document.querySelector(".postButton");
+            reviewBtn.classList.add('submit-btn');
             itemList.push(item);
+            this.style.backgroundColor = "#446CD1";
+            this.style.color = "white";
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -130,7 +160,12 @@ function button7F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const reviewBtn = document.querySelector(".postButton");
+            reviewBtn.classList.add('submit-btn');
             itemList.push(item);
+            this.style.backgroundColor = "#446CD1";
+            this.style.color = "white";
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -143,7 +178,12 @@ function button8F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const reviewBtn = document.querySelector(".postButton");
+            reviewBtn.classList.add('submit-btn');
             itemList.push(item);
+            this.style.backgroundColor = "#446CD1";
+            this.style.color = "white";
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -156,7 +196,12 @@ function button9F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const reviewBtn = document.querySelector(".postButton");
+            reviewBtn.classList.add('submit-btn');
             itemList.push(item);
+            this.style.backgroundColor = "#446CD1";
+            this.style.color = "white";
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -169,7 +214,12 @@ function button10F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const reviewBtn = document.querySelector(".postButton");
+            reviewBtn.classList.add('submit-btn');
             itemList.push(item);
+            this.style.backgroundColor = "#446CD1";
+            this.style.color = "white";
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -182,7 +232,12 @@ function button11F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const reviewBtn = document.querySelector(".postButton");
+            reviewBtn.classList.add('submit-btn');
             itemList.push(item);
+            this.style.backgroundColor = "#446CD1";
+            this.style.color = "white";
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -195,7 +250,12 @@ function button12F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const reviewBtn = document.querySelector(".postButton");
+            reviewBtn.classList.add('submit-btn');
             itemList.push(item);
+            this.style.backgroundColor = "#446CD1";
+            this.style.color = "white";
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -209,6 +269,9 @@ function button13F() {
             return;
         } else {
             itemList.push(item);
+            this.style.backgroundColor = "#446CD1";
+            this.style.color = "white";
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
@@ -222,18 +285,21 @@ function button14F() {
             return;
         } else {
             itemList.push(item);
+            this.style.backgroundColor = "#446CD1";
+            this.style.color = "white";
+            this.id = `b-${itemList.indexOf(item).toString()}`;
         }
     }
 
     showList();
 }
 
-
+let id;
 function showList() {
     let list = "<ul id = 'candidate-list'>"
     for (let i = 0; i < itemList.length; i++) {
-        list += `<li class = 'candidate-li'><span class = 'candidate-name'>${itemList[i]}</span><section class = "up-down"><section class = "up-down-btns"><button type="button" class="upButton" value="up" id='${i}'>&#x25B2;</button>
-        <button type="button" class="downButton" value="down" id='${i}'">&#x25BC;</button></section></section><span class='close' id='${i}'>&times;</span></li>
+        list += `<li class = 'candidate-li'><section class = 'candidate-data'><span class = 'candidate-name'>${itemList[i]}</span><section class = "up-down"><section class = "up-down-btns"><button type="button" class="upButton" value="up" id='${i}'>&#x25B2;</button>
+        <button type="button" class="downButton" value="down" id='${i}'">&#x25BC;</button></section></section><span class='close' id='${i}'>&times;</span></section></li>
         `;
     }
     list += '</ul>'
@@ -242,67 +308,240 @@ function showList() {
     //  candidateList.appendChild(candidateLi);
     let deleteButtons = document.querySelectorAll(".close");
     for (let i = 0; i < deleteButtons.length; i++) {
-        deleteButtons[i].addEventListener("click", deleteItem);
+        const li = deleteButtons[i].parentElement;
+        deleteButtons[i].onclick = () => {
+            li.classList.add('delete-animation');
+        }
+        li.ontransitionend = () => {
+            deleteItem(deleteButtons[i]);
+            li.classList.remove('delete-animation');
+        }
     }
     // down buttons
-    const allLi = document.querySelectorAll(".candidate-li");
-
-        for (let i = 0; i < allLi.length; i++) {
-            allLi[i].onclick = () => {
-                deleteButtons.forEach(db => {
-                    showArrows(allLi[i], deleteButtons, db)
-                });  
-            }
+    const allLi = document.querySelectorAll('.candidate-li');
+    for (let i = 0; i < allLi.length; i++) {
+        const cName = allLi[i].querySelector(".candidate-name");
+        cName.onclick = () => {
+            deleteButtons.forEach(db => {
+                const upDown = allLi[i].querySelector(".up-down");
+                const section = allLi[i].querySelector('.candidate-data');
+                section.classList.add('selected');
+                allLi[i].classList.add('candidate-selected');
+                upDown.classList.add('up-down-visible');
+                db.classList.add('close-white');
+                upArrows(deleteButtons, db);
+                downArrows(deleteButtons)
+                let otherCandidates = [...allLi].filter(arr => [...allLi].indexOf(arr) !== i);
+                otherCandidates.forEach(oc => {
+                    const otherSections = oc.querySelector('.candidate-data')
+                    const otherArrows = oc.querySelector('.up-down');
+                    const otherDeletes = oc.querySelector('.close');
+                    if(oc.classList.contains('candidate-selected')) {
+                        oc.classList.remove('candidate-selected');
+                    }
+                    if(otherSections.classList.contains('selected')) {
+                        otherSections.classList.remove('selected');
+                    }
+                    if(otherArrows.classList.contains('up-down-visible')) {
+                        otherArrows.classList.remove('up-down-visible');
+                    }
+                    if(otherDeletes.classList.contains('close-white')) {
+                        otherDeletes.classList.remove('close-white')
+                    }
+                })
+            });
         }
-
+    }
     // up buttons
 }
 
-function showArrows(listItem, deleteButtons, closeBtn) {
-    const upDown = listItem.querySelector(".up-down");
-    upDown.style.display = "block";
-    upDown.style.float = "right";
-    listItem.style.backgroundColor = "#3272E9";
-    listItem.style.color = "white";
-    closeBtn.style.color = "white";
-    closeBtn.style.marginRight = "30px";
+function upArrows(deleteButtons) {
     let upButtons = document.querySelectorAll(".upButton");
     for (let i = 0; i < deleteButtons.length; i++) {
-        upButtons[i].addEventListener('click', upButton);
-    }
-    let downButtons = document.querySelectorAll('.downButton');
-    for (let i = 0; i < deleteButtons.length; i++) {
-        downButtons[i].addEventListener('click', downButton);
+        let li = deleteButtons[i].parentElement;
+        upButtons[i].onclick = () => {
+            upButton(upButtons[i])
+           // li.classList.add('up-animation');
+        }
+        // li.ontransitionend = () => {
+        //     upButton(upButtons[i])
+        //     li.classList.remove('up-animation');
+        // }
+        
     }
 }
 
-function deleteItem() {
-    let id = this.getAttribute("id");
+function downArrows(deleteButtons) {
+    let downButtons = document.querySelectorAll('.downButton');
+    for (let i = 0; i < deleteButtons.length; i++) {
+        let li = deleteButtons[i].parentElement;
+        downButtons[i].onclick = () => {
+            downButton(downButtons[i])
+          //  li.classList.add('down-animation');
+        }
+        // li.ontransitionend = () => {
+        //     downButton(downButtons[i])
+        //     li.classList.remove('down-animation');
+        // }
+    }
+
+}
+    
+
+    //  const candidateButtons = document.querySelector(".candidateButtons");
+    //  const buttonToDeselect = candidateButtons.querySelector(`#b-${id}`);
+    //  buttonToDeselect.style.backgroundColor = "white";
+    // buttonToDeselect.style.color = "black";
+
+function deleteItem(deleteBtn) {
+    let id = deleteBtn.getAttribute("id");
+    console.log(id);
+    let parseId = parseInt(id);
+    const candidateButtons = document.querySelector(".candidateButtons");
+    const buttonToDeselect = candidateButtons.querySelector(`#b-${id}`);
+
+    //console.log(buttonToDeselect.id);
+    buttonToDeselect.style.backgroundColor = "white";
+    buttonToDeselect.style.color = "black";
     itemList.splice(id, 1);
+    console.log(itemList);
+    const reviewBtn = document.querySelector(".postButton");
+   
+    if(itemList.length === 0 && reviewBtn.classList.contains('submit-btn')) {
+        reviewBtn.classList.remove('submit-btn');
+    }
     showList();
+    buttonToDeselect.removeAttribute('id');
+    // const buttonToDeselect2 = candidateButtons.querySelector(`#b-${parseId+1}`);
+    // buttonToDeselect2.setAttribute('id', `b-${parseId}`);
+
+    if(parseId == 0){
+        const btd1 = candidateButtons.querySelector(`#b-${1}`);
+        btd1.setAttribute('id', `b-${0}`);
+        const btd2 = candidateButtons.querySelector(`#b-${2}`);
+        btd2.setAttribute('id', `b-${1}`);
+        const btd3 = candidateButtons.querySelector(`#b-${3}`);
+        btd3.setAttribute('id', `b-${2}`);
+        const btd4 = candidateButtons.querySelector(`#b-${4}`);
+        btd4.setAttribute('id', `b-${3}`);
+    }
+
+    if(parseId == 1){
+        const btd5 = candidateButtons.querySelector(`#b-${2}`);
+        btd5.setAttribute('id', `b-${1}`);
+        const btd6 = candidateButtons.querySelector(`#b-${3}`);
+        btd6.setAttribute('id', `b-${2}`);
+        const btd7 = candidateButtons.querySelector(`#b-${4}`);
+        btd7.setAttribute('id', `b-${3}`);
+    }
+    if(parseId == 2){
+        const btd8 = candidateButtons.querySelector(`#b-${3}`);
+        btd8.setAttribute('id', `b-${2}`);
+        const btd9 = candidateButtons.querySelector(`#b-${4}`);
+        btd9.setAttribute('id', `b-${3}`);
+
+    }
+    if(parseId == 3){
+        const btd10 = candidateButtons.querySelector(`#b-${4}`);
+        btd10.setAttribute('id', `b-${3}`);
+
+    }
+
+
+    
+
 }
 // up button
-function upButton() {
-    let id = this.getAttribute('id');
+function upButton(upBtn) {
+    let id = upBtn.getAttribute('id');
+    console.log(upBtn);
     let parseId = parseInt(id);
     let f = itemList.splice(parseId, 1)[0];
     if (parseId <= itemList.length) {
-        console.log(f);
+        const candidateButtons = document.querySelector(".candidateButtons");
+        const buttonToDeselect = candidateButtons.querySelector(`#b-${id}`);
+        //console.log(f);
         itemList.splice(parseId - 1, 0, f);
-        this.id = parseId - 1;
+        upBtn.id = parseId - 1;
+        // buttonToDeselect.removeAttribute('id');
+        // buttonToDeselect.setAttribute('id', `b-${parseId - 1}`);
+        if(parseId == 1){
+            const btda = candidateButtons.querySelector(`#b-${0}`);
+            const btdb = candidateButtons.querySelector(`#b-${1}`);
+
+            btda.setAttribute('id', `b-${1}`);
+            btdb.setAttribute('id', `b-${0}`);
+        }
+        if(parseId == 2){
+            const btda = candidateButtons.querySelector(`#b-${1}`);
+            const btdb = candidateButtons.querySelector(`#b-${2}`);
+
+            btda.setAttribute('id', `b-${2}`);
+            btdb.setAttribute('id', `b-${1}`);
+        }
+
+        if(parseId == 3){
+            const btda = candidateButtons.querySelector(`#b-${2}`);
+            const btdb = candidateButtons.querySelector(`#b-${3}`);
+
+            btda.setAttribute('id', `b-${3}`);
+            btdb.setAttribute('id', `b-${2}`);
+        }
+        if(parseId == 4){
+            const btda = candidateButtons.querySelector(`#b-${3}`);
+            const btdb = candidateButtons.querySelector(`#b-${4}`);
+
+            btda.setAttribute('id', `b-${4}`);
+            btdb.setAttribute('id', `b-${3}`);
+        }
     }
     showList();
 }
 
 // down button
-function downButton() {
-    let id = this.getAttribute('id');
+function downButton(downBtn) {
+    let id = downBtn.getAttribute('id');
     let parseId = parseInt(id);
     let f = itemList.splice(parseId, 1)[0];
     if (parseId <= itemList.length) {
-        console.log(f);
+        const candidateButtons = document.querySelector(".candidateButtons");
+        const buttonToDeselect = candidateButtons.querySelector(`#b-${id}`);
+        //console.log(f);
         itemList.splice(parseId + 1, 0, f);
-        this.id = parseId + 1;
+        downBtn.id = parseId + 1;
+        //   buttonToDeselect.removeAttribute('id');
+        // buttonToDeselect.setAttribute('id', `b-${parseId + 1}`);
+        if(parseId == 0){
+            const btda = candidateButtons.querySelector(`#b-${1}`);
+            const btdb = candidateButtons.querySelector(`#b-${0}`);
+
+            btda.setAttribute('id', `b-${0}`);
+            btdb.setAttribute('id', `b-${1}`);
+        }
+
+        
+        if(parseId == 1){
+            const btda = candidateButtons.querySelector(`#b-${2}`);
+            const btdb = candidateButtons.querySelector(`#b-${1}`);
+
+            btda.setAttribute('id', `b-${1}`);
+            btdb.setAttribute('id', `b-${2}`);
+        }
+
+        if(parseId == 2){
+            const btda = candidateButtons.querySelector(`#b-${3}`);
+            const btdb = candidateButtons.querySelector(`#b-${2}`);
+
+            btda.setAttribute('id', `b-${2}`);
+            btdb.setAttribute('id', `b-${3}`);
+        }
+        if(parseId == 3){
+            const btda = candidateButtons.querySelector(`#b-${4}`);
+            const btdb = candidateButtons.querySelector(`#b-${3}`);
+
+            btda.setAttribute('id', `b-${3}`);
+            btdb.setAttribute('id', `b-${4}`);
+        }
     }
     showList();
 }

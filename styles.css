@@ -40,7 +40,7 @@
 }
 
 #rectangle {
-    position:relative;
+    position: relative;
     width: 600px;
     min-height: 60px;
     margin-top: 4%;
@@ -81,6 +81,7 @@
 #x {
     margin-right: 10px;
 }
+
 .title {
     text-align: center;
 }
@@ -88,6 +89,7 @@
 .candiateList {
     display: inline-block;
 }
+
 
 .candidateButtons {
     width: 500px;
@@ -138,6 +140,7 @@
     align-items: flex-end;
     padding: 10px;
 }
+
 .up-down-btns button {
     width: 70px;
     height: 30px;
@@ -163,14 +166,60 @@
     margin-right: 500px;
 }
 
-.candidate-li {
-    width: 860px;
+.candidate-data {
+    width: 780px;
     height: 80px;
     border-radius: 20px;
     border: 1px solid black;
     text-align: center;
     margin-bottom: 15px;
-    cursor: pointer;
+    transform: translateX(0);
+}
+
+.candidate-li {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.delete-animation {
+    transform: translateX(900px);
+    transition: all 0.6s ease-out;
+}
+
+.up-animation {
+    transform: translateY(-100px);
+    transition: all 0.6s ease-out;
+    z-index: 1;
+    position: relative;
+}
+
+.down-animation {
+    transform: translateY(100px);
+    transition: all 0.6s ease-out;
+    z-index: 1;
+    position: relative;
+}
+
+.selected {
+    background-color: #3272E9;
+    color: white;
+}
+
+.candidate-selected::before {
+    color: white;
+    background: #3272E9;
+    border: 1px solid #3272E9;
+}
+
+.up-down-visible {
+    display: block;
+    float: right;
+}
+
+.close-white {
+    color: white;
+    margin-right: 30px;
 }
 
 #candidate-list {
@@ -180,25 +229,34 @@
     counter-reset: list-numbers;
     list-style-type: none;
     font-size: 20px;
+    list-style-position: outside;
+    height: 100%;
 }
 
-#candidate-list li:before {
+.candidate-li::before {
     counter-increment: list-numbers;
     content: counter(list-numbers);
-    color: white;
-    background: #446CD1;
+    border: 1px solid black;
     border-radius: 50%;
-    min-width: 60px;
-    min-height: 60px;
+    height: 50px;
+    width: 30px;
     font-size: 32px;
     padding-left: 10px;
     padding-right: 10px;
-    margin-right: 20px;
+    margin-right: 10px;
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 7px;
 }
 
 
 .candidate-name {
     padding-top: 15px;
+}
+
+.candidate-name:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 #ballot-instructions {
@@ -219,7 +277,7 @@
     border-radius: 20px;
 }
 
-.popup .overlay{
+.popup .overlay {
     position: fixed;
     top: 0px;
     left: 0px;
@@ -228,9 +286,9 @@
     background: white;
     z-index: 1;
     display: none;
-  }
+}
 
-  .popup .content {
+.popup .content {
 
     position: absolute;
     top: 50%;
@@ -242,9 +300,9 @@
     text-align: center;
     padding: 20px;
     box-sizing: border-box;
-  }
-  
-  .popup .close-btn {
+}
+
+.popup .close-btn {
     position: absolute;
     right: 10px;
     top: 10px;
@@ -255,68 +313,72 @@
     font-weight: 600;
     line-height: 25px;
     text-align: center;
-  }
-  .popupButton {
+}
+
+.popupButton {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 22px 42px;
-    
+
     position: absolute;
     width: 140px;
     height: 50px;
     left: 900px;
     top: 800px;
-    
+
     /* Primary Blue */
-    
+
     background: #3272E9;
     border-radius: 16px;
-  }
-  .popupBackButton {
+}
+
+.popupBackButton {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 22px 42px;
-    
+
     position: absolute;
     width: 140px;
     height: 50px;
     left: 50px;
     top: 30px;
-    
+
     background: #DFE2E6;
     border-radius: 16px;
-  }
-  .reviewButton{
+}
+
+.reviewButton {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 22px 42px;
-    
+
     position: absolute;
     width: 140px;
     height: 50px;
     left: 1700px;
     top: 30px;
-    
+
     /* Primary Blue */
-    
+
     background: #3272E9;
     border-radius: 16px;
-  }
-  
-  .popup.active .overlay {
+}
+
+.popup.active .overlay {
     display: block;
-  }
-  
-  .popup.active .content {
+}
+
+.popup.active .content {
     transition: all 300ms ease-in-out;
     transform: translate(-50%, -50%) scale(1);
-  }
+}
+
 .nav {
     display: flex;
     flex-direction: row;
@@ -336,19 +398,22 @@
     grid-auto-flow: column;
     position: relative;
     left: 50%;
-    transform:translate(-70%, 0%);
+    transform: translate(-70%, 0%);
     margin-top: 20px;
 }
-.languageButtons h2{
+
+.languageButtons h2 {
     padding: 0;
     margin: 0;
     margin-top: 10px;
 }
-.langH1{
+
+.langH1 {
     text-align: center;
     font-size: 2em;
 }
-.langH3{
+
+.langH3 {
     text-align: center;
     margin-bottom: 50px;
     font-size: 1.5em;
@@ -356,7 +421,7 @@
 
 .candidate-btn2 {
     position: relative;
-    transform:translate(-50%, 0%);
+    transform: translate(-50%, 0%);
     top: 10%;
     left: 50%;
     width: 330px;
@@ -367,8 +432,28 @@
     border-radius: 20px;
     background-color: white;
 }
+
 .candidate-btn2:focus {
     background-color: #446CD1;
+    color: white;
+}
+
+.postButton {
+    width: 144px;
+    height: 63px;
+    /* Light Grey */
+    font-size: 20px;
+    border: 2px solid #D5DEED;
+    box-sizing: border-box;
+    border-radius: 16px;
+}
+#review {
+    margin-bottom: 30px;
+    display:flex;
+    justify-content: flex-end;
+}
+.submit-btn {
+    background-color: #3272E9;
     color: white;
 }
 /* body {
