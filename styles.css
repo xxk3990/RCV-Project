@@ -184,6 +184,12 @@
     color: white;
 }
 
+.candidate-selected::before {
+    color: white;
+    background: #3272E9;
+    border: 1px solid #3272E9;
+}
+
 .up-down-visible {
     display: block;
     float: right;
@@ -207,8 +213,7 @@
 .candidate-li::before {
     counter-increment: list-numbers;
     content: counter(list-numbers);
-    color: white;
-    background: #446CD1;
+    border: 1px solid black;
     border-radius: 50%;
     height: 50px;
     width: 30px;

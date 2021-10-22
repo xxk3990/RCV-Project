@@ -302,6 +302,7 @@ function showList() {
                 const upDown = allLi[i].querySelector(".up-down");
                 const section = allLi[i].querySelector('.candidate-data');
                 section.classList.add('selected');
+                allLi[i].classList.add('candidate-selected');
                 upDown.classList.add('up-down-visible');
                 db.classList.add('close-white');
                 showArrows(deleteButtons)
@@ -310,6 +311,9 @@ function showList() {
                     const otherSections = oc.querySelector('.candidate-data')
                     const otherArrows = oc.querySelector('.up-down');
                     const otherDeletes = oc.querySelector('.close');
+                    if(oc.classList.contains('candidate-selected')) {
+                        oc.classList.remove('candidate-selected');
+                    }
                     if(otherSections.classList.contains('selected')) {
                         otherSections.classList.remove('selected');
                     }
