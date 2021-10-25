@@ -53,7 +53,7 @@ function button1F() {
             const reviewBtn = document.querySelector(".postButton");
             reviewBtn.classList.add('submit-btn');
             itemList.push(item);
-            this.style.backgroundColor = "#446CD1";
+            this.style.backgroundColor = "#3272E9";
             this.style.color = "white";
             //console.log(itemList.indexOf(item));
             const bi = document.querySelector('.ballot-instructions')
@@ -78,7 +78,7 @@ function button2F() {
             const reviewBtn = document.querySelector(".postButton");
             reviewBtn.classList.add('submit-btn');
             itemList.push(item);
-            this.style.backgroundColor = "#446CD1";
+            this.style.backgroundColor = "#3272E9";
             this.style.color = "white";
             this.id = `b-${itemList.indexOf(item).toString()}`;
             const bi = document.querySelector('.ballot-instructions');
@@ -101,7 +101,7 @@ function button3F() {
             const reviewBtn = document.querySelector(".postButton");
             reviewBtn.classList.add('submit-btn');
             itemList.push(item);
-            this.style.backgroundColor = "#446CD1";
+            this.style.backgroundColor = "#3272E9";
             this.style.color = "white";
             this.id = `b-${itemList.indexOf(item).toString()}`;
             const bi = document.querySelector('.ballot-instructions');
@@ -124,7 +124,7 @@ function button4F() {
             const reviewBtn = document.querySelector(".postButton");
             reviewBtn.classList.add('submit-btn');
             itemList.push(item);
-            this.style.backgroundColor = "#446CD1";
+            this.style.backgroundColor = "#3272E9";
             this.style.color = "white";
             this.id = `b-${itemList.indexOf(item).toString()}`;
             const bi = document.querySelector('.ballot-instructions');
@@ -147,7 +147,7 @@ function button5F() {
             const reviewBtn = document.querySelector(".postButton");
             reviewBtn.classList.add('submit-btn');
             itemList.push(item);
-            this.style.backgroundColor = "#446CD1";
+            this.style.backgroundColor = "#3272E9";
             this.style.color = "white";
             this.id = `b-${itemList.indexOf(item).toString()}`;
             const bi = document.querySelector('.ballot-instructions');
@@ -170,7 +170,7 @@ function button6F() {
             const reviewBtn = document.querySelector(".postButton");
             reviewBtn.classList.add('submit-btn');
             itemList.push(item);
-            this.style.backgroundColor = "#446CD1";
+            this.style.backgroundColor = "#3272E9";
             this.style.color = "white";
             this.id = `b-${itemList.indexOf(item).toString()}`;
             const bi = document.querySelector('.ballot-instructions');
@@ -193,7 +193,7 @@ function button7F() {
             const reviewBtn = document.querySelector(".postButton");
             reviewBtn.classList.add('submit-btn');
             itemList.push(item);
-            this.style.backgroundColor = "#446CD1";
+            this.style.backgroundColor = "#3272E9";
             this.style.color = "white";
             this.id = `b-${itemList.indexOf(item).toString()}`;
             const bi = document.querySelector('.ballot-instructions');
@@ -216,7 +216,7 @@ function button8F() {
             const reviewBtn = document.querySelector(".postButton");
             reviewBtn.classList.add('submit-btn');
             itemList.push(item);
-            this.style.backgroundColor = "#446CD1";
+            this.style.backgroundColor = "#3272E9";
             this.style.color = "white";
             this.id = `b-${itemList.indexOf(item).toString()}`;
             const bi = document.querySelector('.ballot-instructions');
@@ -239,7 +239,7 @@ function button9F() {
             const reviewBtn = document.querySelector(".postButton");
             reviewBtn.classList.add('submit-btn');
             itemList.push(item);
-            this.style.backgroundColor = "#446CD1";
+            this.style.backgroundColor = "#3272E9";
             this.style.color = "white";
             this.id = `b-${itemList.indexOf(item).toString()}`;
             const bi = document.querySelector('.ballot-instructions');
@@ -262,7 +262,7 @@ function button10F() {
             const reviewBtn = document.querySelector(".postButton");
             reviewBtn.classList.add('submit-btn');
             itemList.push(item);
-            this.style.backgroundColor = "#446CD1";
+            this.style.backgroundColor = "#3272E9";
             this.style.color = "white";
             this.id = `b-${itemList.indexOf(item).toString()}`;
             const bi = document.querySelector('.ballot-instructions');
@@ -285,7 +285,7 @@ function button11F() {
             const reviewBtn = document.querySelector(".postButton");
             reviewBtn.classList.add('submit-btn');
             itemList.push(item);
-            this.style.backgroundColor = "#446CD1";
+            this.style.backgroundColor = "#3272E9";
             this.style.color = "white";
             this.id = `b-${itemList.indexOf(item).toString()}`;
             const bi = document.querySelector('.ballot-instructions');
@@ -308,7 +308,7 @@ function button12F() {
             const reviewBtn = document.querySelector(".postButton");
             reviewBtn.classList.add('submit-btn');
             itemList.push(item);
-            this.style.backgroundColor = "#446CD1";
+            this.style.backgroundColor = "#3272E9";
             this.style.color = "white";
             this.id = `b-${itemList.indexOf(item).toString()}`;
             const bi = document.querySelector('.ballot-instructions');
@@ -329,7 +329,7 @@ function button13F() {
             return;
         } else {
             itemList.push(item);
-            this.style.backgroundColor = "#446CD1";
+            this.style.backgroundColor = "#3272E9";
             this.style.color = "white";
             this.id = `b-${itemList.indexOf(item).toString()}`;
             const bi = document.querySelector('.ballot-instructions');
@@ -350,7 +350,7 @@ function button14F() {
             return;
         } else {
             itemList.push(item);
-            this.style.backgroundColor = "#446CD1";
+            this.style.backgroundColor = "#3272E9";
             this.style.color = "white";
             this.id = `b-${itemList.indexOf(item).toString()}`;
             const bi = document.querySelector('.ballot-instructions');
