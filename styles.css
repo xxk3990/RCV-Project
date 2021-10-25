@@ -483,6 +483,7 @@
 #right {
     color: #ffffff;
     background-color: #6093EF;
+    border: 5px solid #6093EF;
     display: flex;
     flex-direction: column;
     align-items: center;
