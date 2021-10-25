@@ -647,3 +647,19 @@ b {
     background-color: #13268b;
     background-image: url("images/texture.png");
 } */
+
+#back-button {
+    background-color: white;
+    color: #3a3a3a;
+    border: none;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+
+    margin-left: 120px;
+    margin-top: 91px;
+}
+
