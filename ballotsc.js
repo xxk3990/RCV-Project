@@ -56,7 +56,12 @@ function button1F() {
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
             //console.log(itemList.indexOf(item));
+            const bi = document.querySelector('.ballot-instructions')
             this.id = `b-${itemList.indexOf(item).toString()}`;
+            if(itemList.length > 0 && itemList.length < 4 && !document.querySelector('.result').contains(bi)) {
+                const result = document.querySelector('.result');
+                result.insertAdjacentHTML('beforeend','<p class ="ballot-instructions"><strong>Review</strong> your ballot or <strong>select</strong> another candidate</p>')
+            }
         }
     }
 
@@ -76,6 +81,11 @@ function button2F() {
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
             this.id = `b-${itemList.indexOf(item).toString()}`;
+            const bi = document.querySelector('.ballot-instructions');
+            if(itemList.length > 0 && itemList.length < 4 && !document.querySelector('.result').contains(bi)) {
+                const result = document.querySelector('.result');
+                result.insertAdjacentHTML('beforeend','<p class ="ballot-instructions"><strong>Review</strong> your ballot or <strong>select</strong> another candidate</p>')
+            }
         }
     }
 
@@ -94,6 +104,11 @@ function button3F() {
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
             this.id = `b-${itemList.indexOf(item).toString()}`;
+            const bi = document.querySelector('.ballot-instructions');
+            if(itemList.length > 0 && itemList.length < 4 && !document.querySelector('.result').contains(bi)) {
+                const result = document.querySelector('.result');
+                result.insertAdjacentHTML('beforeend','<p class ="ballot-instructions"><strong>Review</strong> your ballot or <strong>select</strong> another candidate</p>')
+            }
         }
     }
 
@@ -112,6 +127,11 @@ function button4F() {
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
             this.id = `b-${itemList.indexOf(item).toString()}`;
+            const bi = document.querySelector('.ballot-instructions');
+            if(itemList.length > 0 && itemList.length < 4 && !document.querySelector('.result').contains(bi)) {
+                const result = document.querySelector('.result');
+                result.insertAdjacentHTML('beforeend','<p class ="ballot-instructions"><strong>Review</strong> your ballot or <strong>select</strong> another candidate</p>')
+            }
         }
     }
 
@@ -130,6 +150,11 @@ function button5F() {
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
             this.id = `b-${itemList.indexOf(item).toString()}`;
+            const bi = document.querySelector('.ballot-instructions');
+            if(itemList.length > 0 && itemList.length < 4 && !document.querySelector('.result').contains(bi)) {
+                const result = document.querySelector('.result');
+                result.insertAdjacentHTML('beforeend','<p class ="ballot-instructions"><strong>Review</strong> your ballot or <strong>select</strong> another candidate</p>')
+            }
         }
     }
 
@@ -148,6 +173,11 @@ function button6F() {
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
             this.id = `b-${itemList.indexOf(item).toString()}`;
+            const bi = document.querySelector('.ballot-instructions');
+            if(itemList.length > 0 && itemList.length < 4 && !document.querySelector('.result').contains(bi)) {
+                const result = document.querySelector('.result');
+                result.insertAdjacentHTML('beforeend','<p class ="ballot-instructions"><strong>Review</strong> your ballot or <strong>select</strong> another candidate</p>')
+            }
         }
     }
 
@@ -166,6 +196,11 @@ function button7F() {
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
             this.id = `b-${itemList.indexOf(item).toString()}`;
+            const bi = document.querySelector('.ballot-instructions');
+            if(itemList.length > 0 && itemList.length < 4 && !document.querySelector('.result').contains(bi)) {
+                const result = document.querySelector('.result');
+                result.insertAdjacentHTML('beforeend','<p class ="ballot-instructions"><strong>Review</strong> your ballot or <strong>select</strong> another candidate</p>')
+            }
         }
     }
 
@@ -184,6 +219,11 @@ function button8F() {
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
             this.id = `b-${itemList.indexOf(item).toString()}`;
+            const bi = document.querySelector('.ballot-instructions');
+            if(itemList.length > 0 && itemList.length < 4 && !document.querySelector('.result').contains(bi)) {
+                const result = document.querySelector('.result');
+                result.insertAdjacentHTML('beforeend','<p class ="ballot-instructions"><strong>Review</strong> your ballot or <strong>select</strong> another candidate</p>')
+            }
         }
     }
 
@@ -202,6 +242,11 @@ function button9F() {
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
             this.id = `b-${itemList.indexOf(item).toString()}`;
+            const bi = document.querySelector('.ballot-instructions');
+            if(itemList.length > 0 && itemList.length < 4 && !document.querySelector('.result').contains(bi)) {
+                const result = document.querySelector('.result');
+                result.insertAdjacentHTML('beforeend','<p class ="ballot-instructions"><strong>Review</strong> your ballot or <strong>select</strong> another candidate</p>')
+            }
         }
     }
 
@@ -220,6 +265,11 @@ function button10F() {
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
             this.id = `b-${itemList.indexOf(item).toString()}`;
+            const bi = document.querySelector('.ballot-instructions');
+            if(itemList.length > 0 && itemList.length < 4 && !document.querySelector('.result').contains(bi)) {
+                const result = document.querySelector('.result');
+                result.insertAdjacentHTML('beforeend','<p class ="ballot-instructions"><strong>Review</strong> your ballot or <strong>select</strong> another candidate</p>')
+            }
         }
     }
 
@@ -238,6 +288,11 @@ function button11F() {
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
             this.id = `b-${itemList.indexOf(item).toString()}`;
+            const bi = document.querySelector('.ballot-instructions');
+            if(itemList.length > 0 && itemList.length < 4 && !document.querySelector('.result').contains(bi)) {
+                const result = document.querySelector('.result');
+                result.insertAdjacentHTML('beforeend','<p class ="ballot-instructions"><strong>Review</strong> your ballot or <strong>select</strong> another candidate</p>')
+            }
         }
     }
 
@@ -256,6 +311,11 @@ function button12F() {
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
             this.id = `b-${itemList.indexOf(item).toString()}`;
+            const bi = document.querySelector('.ballot-instructions');
+            if(itemList.length > 0 && itemList.length < 4 && !document.querySelector('.result').contains(bi)) {
+                const result = document.querySelector('.result');
+                result.insertAdjacentHTML('beforeend','<p class ="ballot-instructions"><strong>Review</strong> your ballot or <strong>select</strong> another candidate</p>')
+            }
         }
     }
 
@@ -272,6 +332,11 @@ function button13F() {
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
             this.id = `b-${itemList.indexOf(item).toString()}`;
+            const bi = document.querySelector('.ballot-instructions');
+            if(itemList.length > 0 && itemList.length < 4 && !document.querySelector('.result').contains(bi)) {
+                const result = document.querySelector('.result');
+                result.insertAdjacentHTML('beforeend','<p class ="ballot-instructions"><strong>Review</strong> your ballot or <strong>select</strong> another candidate</p>')
+            }
         }
     }
 
@@ -288,6 +353,11 @@ function button14F() {
             this.style.backgroundColor = "#446CD1";
             this.style.color = "white";
             this.id = `b-${itemList.indexOf(item).toString()}`;
+            const bi = document.querySelector('.ballot-instructions');
+            if(itemList.length > 0 && itemList.length < 4 && !document.querySelector('.result').contains(bi)) {
+                const result = document.querySelector('.result');
+                result.insertAdjacentHTML('beforeend','<p class ="ballot-instructions"><strong>Review</strong> your ballot or <strong>select</strong> another candidate</p>')
+            }
         }
     }
 
@@ -304,7 +374,15 @@ function showList() {
     }
     list += '</ul>'
     document.querySelector(".candidateList").innerHTML = list;
-
+    if(itemList.length === 5) {
+        const result = document.querySelector('.result');
+        const instructions = result.querySelector('.ballot-instructions')
+        instructions.style.display = "none";
+    } else {
+        const result = document.querySelector('.result');
+        const instructions = result.querySelector('.ballot-instructions')
+        instructions.style.display = "block"
+    }
     //  candidateList.appendChild(candidateLi);
     let deleteButtons = document.querySelectorAll(".close");
     for (let i = 0; i < deleteButtons.length; i++) {

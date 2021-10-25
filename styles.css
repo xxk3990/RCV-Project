@@ -150,6 +150,9 @@
     border: 1px solid black;
     margin-right: 25px;
 }
+.ballot-instructions {
+    text-align: center;
+}
 
 .review {
     float: center;
