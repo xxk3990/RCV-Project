@@ -27,6 +27,31 @@ button13.addEventListener("click", button13F);
 let button14 = document.querySelector(".button14");
 button14.addEventListener("click", button14F);
 
+const helpBtn = document.querySelector("#ballot-help-icon");
+helpBtn.onclick = loadHelpPopup;
+
+function loadHelpPopup() {
+    document.querySelector('#help-popup').classList.toggle('active')
+}
+/*
+click anywhere to select candidate (DONE)
+candidate name position (left-aligned) (DONE)
+candidate name should not move (DONE)
+candidate name/dem weight difference (DONE), unable to do in list of five 
+help pop-up
+My Ballot box size should stay fixed (DONE)
+My ballot border radius and color
+My Ballot text alignment and content (DONE)
+My Ballot line separating text and candidates (DONE)
+My Ballot Need help? button on right side
+Select a candidate text should be blue before selecting first candidate
+little check mark icon^
+submit and review same size
+make sure all fonts are inter and correct weight (especially review page)
+make sure all colors are correct, anything black should be #3a3a3a 
+
+*/
+
 function togglePopup() {
     if (itemList.length > 0) {
         document.querySelector("#popup-1").classList.toggle("active");
@@ -368,8 +393,8 @@ let id;
 function showList() {
     let list = "<ul id = 'candidate-list'>"
     for (let i = 0; i < itemList.length; i++) {
-        list += `<li class = 'candidate-li'><section class = 'candidate-data'><span class = 'candidate-name'>${itemList[i]}</span><section class = "up-down"><section class = "up-down-btns"><button type="button" class="upButton" value="up" id='${i}'>&#x25B2;</button>
-        <button type="button" class="downButton" value="down" id='${i}'">&#x25BC;</button></section></section><span class='close' id='${i}'>&times;</span></section></li>
+        list += `<li class = 'candidate-li'><section class = 'candidate-data'><span class = 'candidate-name'>${itemList[i]}</span><span class='close' id='${i}'>&times;</span></section><section class = "up-down"><section class = "up-down-btns"><button type="button" class="upButton" value="up" id='${i}'>&#x25B2;</button>
+        <button type="button" class="downButton" value="down" id='${i}'">&#x25BC;</button></section></section></li>
         `;
     }
     list += '</ul>'

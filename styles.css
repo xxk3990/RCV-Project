@@ -119,7 +119,6 @@
     border-radius: 20px;
     background-color: white;
     font-family: 'Inter', sans-serif;
-    font-weight: normal;
     font-size: 20px;
     border: 1px solid #3272E9
 }
@@ -156,11 +155,18 @@
 
 .result {
     float: right;
-    border: 1px solid black;
+    border: 1px solid lightgray;
     margin-right: 25px;
+    height: 700px;
+    width: 900px;
+    border-radius: 20px;
 }
 .ballot-instructions {
     text-align: center;
+}
+
+#ballot-instructions {
+    text-align: left;
 }
 
 .review {
@@ -180,12 +186,16 @@
     text-align: center;
     margin-bottom: 15px;
     transform: translateX(0);
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
 }
 
 .candidate-li {
     display: flex;
     justify-content: space-evenly;
     cursor: pointer;
+    width: 850px;
 }
 
 
@@ -211,6 +221,7 @@
 .selected {
     background-color: #3272E9;
     color: white;
+    width: 700px;
 }
 
 .candidate-selected::before {
@@ -240,6 +251,15 @@
     height: 100%;
 }
 
+.btn-name {
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+}
+.party {
+    font-style: normal;
+    font-family: 'Inter', sans-serif;
+}
+
 .candidate-li::before {
     counter-increment: list-numbers;
     content: counter(list-numbers);
@@ -260,6 +280,7 @@
 .candidate-name {
     padding-top: 15px;
     font-family: "Inter", sans-serif;
+    padding-top: 27px;
 }
 
 #ballot-instructions {
@@ -267,7 +288,23 @@
 }
 
 #ballot-title {
-    text-align: center;
+    text-align: left;
+    padding-left: 10px;
+}
+
+#ballot-title-img {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#ballot-help-icon {
+    width: 24px;
+    height: 24px;
+    margin-top: 19px;
+    padding-left: 5px;
+}
+.spacer {
+    width: 850px;
 }
 
 .popupReview {
@@ -378,6 +415,28 @@
 }
 
 .popup.active .content {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#help-popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+#help-popup.active .overlay {
+    display: block;
+}
+
+#help-popup.active .content {
     transition: all 300ms ease-in-out;
     transform: translate(-50%, -50%) scale(1);
 }

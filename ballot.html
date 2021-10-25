@@ -15,7 +15,7 @@
 
 <body>
     <section class="header-row">
-        <button class="back-btn" onclick ="window.location.href = 'ballot-start.html'">Back</button>
+        <button class="back-btn" onclick="window.location.href = 'ballot-start.html'">Back</button>
 
         <h1 class="title">NYC Democratic Primary Election </h1>
         <button class="postButton" onclick="togglePopup()">Review</button>
@@ -31,45 +31,83 @@
                 <h3>My Ballot</h3>
                 <section class="candidateList-popup"></section>
             </div>
-            
+
             <button class="popupBackButton" type="button" onclick="togglePopup()">Back</button>
             <button class="popupButton" type="button" onClick="location.href='vote-confirmed.html'">Submit</button>
         </div>
     </div>
 
+    <section class="help-popup" id="help-popup">
+        <section class="overlay"></section>
+        <section class="content">
+            <section class="content-instructions">
+                <section id="help-1">
+                    <img id="candidate-illustration" src="images/5 Candidate Illustration.png">
+                    <p class="help-description">Rank up to 5 candidates from the list of candidates</p>
+                </section>
+                <section id="help-2">
+                    <img id="remove-illustration" src="images/Remove Illustration.png">
+                    <p class="help-description">Select “X” to remove a candidate from your ballot</p>
+                </section>
+                <section id="help-3">
+                    <img id="remove-illustration" src="images/Ranking Illustration.png">
+                    <p class="help-description">Select candidate’s name in your ballot to use arrows to reorder</p>
+                </section>
+            </section>
+            <button type="button" id="close-help-btn">Okay</button>
+        </section>
+    </section>
+
     <div class="candidateButtons">
-        <button type="button" class="button1 candidate-btn" value="Aaron S. Foldenauer (Democrat)">Aaron S. Foldenauer
-            <br> (Democrat) </button>
-        <button type="button" class="button2 candidate-btn" value="Andrew Yang (Democrat)"> Andrew Yang <br> (Democrat)
+        <button type="button" class="button1 candidate-btn" value="Aaron S. Foldenauer (Democrat)"> <span
+                class="btn-name">Aaron S. Foldenauer </span>
+            <br> <span class="party"> (Democrat) </span> </button>
+        <button type="button" class="button2 candidate-btn" value="Andrew Yang (Democrat)"><span class="btn-name">
+                Andrew Yang </span> <br> <span class="party"> (Democrat)</span>
         </button>
-        <button type="button" class="button3 candidate-btn" value="Art Chang (Democrat)"> Art Chang <br> (Democrat)
+        <button type="button" class="button3 candidate-btn" value="Art Chang (Democrat)"> <span class="btn-name"> Art
+                Chang </span> <br> <span class="party"> (Democrat) </span>
         </button>
-        <button type="button" class="button4 candidate-btn" value="Dianne Morales (Democrat)">Dianne Morales <br>
-            (Democrat) </button>
-        <button type="button" class="button5 candidate-btn" value="Eric L. Adams (Democrat)"> Eric L. Adams <br>
-            (Democrat) </button>
-        <button type="button" class="button6 candidate-btn" value="Issac Wright Jr. (Democrat)"> Issac Wright Jr. <br>
-            (Democrat) </button>
-        <button type="button" class="button7 candidate-btn" value="Joycelyn Taylor (Democrat)"> Joycelyn Taylor <br>
-            (Democrat) </button>
-        <button type="button" class="button8 candidate-btn" value="Kathryn A. Garcia (Democrat)"> Kathryn A. Garcia <br>
-            (Democrat) </button>
-        <button type="button" class="button9 candidate-btn" value="Maya D. Wiley (Democrat)"> Maya D. Wiley <br>
-            (Democrat) </button>
-        <button type="button" class="button10 candidate-btn" value="Paperboy Love Prince (Democrat)"> Paperboy Love
-            Prince <br> (Democrat) </button>
-        <button type="button" class="button11 candidate-btn" value="Raymond J. McGuire (Democrat)"> Raymond J. McGuire
-            <br> (Democrat) </button>
-        <button type="button" class="button12 candidate-btn" value="Scott M. Stringer (Democrat)">Scott M. Stringer <br>
-            (Democrat) </button>
-        <button type="button" class="button13 candidate-btn" value="Shaun Donovan (Democrat)"> Shaun Donovan <br>
-            (Democrat) </button>
+        <button type="button" class="button4 candidate-btn" value="Dianne Morales (Democrat)"> <span
+                class="btn-name">Dianne Morales </span> <br><span class="party">
+                (Democrat) </span> </button>
+        <button type="button" class="button5 candidate-btn" value="Eric L. Adams (Democrat)"> <span
+                class="btn-name">Eric L. Adams </span> <br>
+            <span class="party"> (Democrat) </span> </button>
+        <button type="button" class="button6 candidate-btn" value="Issac Wright Jr. (Democrat)"> <span class="btn-name">
+                Issac Wright Jr. </span><br>
+            <span class="party">(Democrat)</span> </button>
+        <button type="button" class="button7 candidate-btn" value="Joycelyn Taylor (Democrat)"> <span class="btn-name">
+                Joycelyn Taylor </span> <br>
+            <span class="party">(Democrat) </span></button>
+        <button type="button" class="button8 candidate-btn" value="Kathryn A. Garcia (Democrat)"> <span
+                class="btn-name"> Kathryn A. Garcia </span> <br>
+            <span class="party"> (Democrat)</span> </button>
+        <button type="button" class="button9 candidate-btn" value="Maya D. Wiley (Democrat)"> <span
+                class="btn-name">Maya D. Wiley </span> <br>
+            <span class="party">(Democrat) </span></button>
+        <button type="button" class="button10 candidate-btn" value="Paperboy Love Prince (Democrat)"> <span
+                class="btn-name">Paperboy Love
+                Prince </span> <br> <span class="party"> (Democrat)</span> </button>
+        <button type="button" class="button11 candidate-btn" value="Raymond J. McGuire (Democrat)"> <span
+                class="btn-name">Raymond J. McGuire</span>
+            <br> <span class="party">(Democrat) </span></button>
+        <button type="button" class="button12 candidate-btn" value="Scott M. Stringer (Democrat)"> <span
+                class="btn-name">Scott M. Stringer </span> <br>
+            <span class="party"> (Democrat) </span> </button>
+        <button type="button" class="button13 candidate-btn" value="Shaun Donovan (Democrat)"> <span
+                class="btn-name">Shaun Donovan</span> <br>
+            <span class="party"> (Democrat) </span> </button>
         <button type="button" class="button14 candidate-btn" value="Write-in"> Write-in </button>
     </div>
     <div class="result">
-        <h2 id="ballot-title">Your Ballot</h2>
-        <p id="ballot-instructions">Rank up to 5 candidates on your ballot. Tap on candidate name to change rank or
-            remove from your ballot</p>
+        <section id="ballot-title-img">
+            <h2 id="ballot-title">My Ballot</h2><img id="ballot-help-icon" src="images/How-it-Works-Grey.png"
+                alt="help icon">
+        </section>
+        <p id="ballot-instructions">Rank up to 5 candidates on your ballot. <br>
+            Select candidate name to reorder rank using arrows.</p>
+        <hr class="spacer">
         <section class="candidateList">
         </section>
     </div>
