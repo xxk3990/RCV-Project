@@ -3,6 +3,12 @@
     font-family: 'Inter', sans-serif;
 }
 
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
 .nav {
     display: flex;
     flex-direction: row;
@@ -179,6 +185,7 @@
 .candidate-li {
     display: flex;
     justify-content: space-evenly;
+    cursor: pointer;
 }
 
 
@@ -252,11 +259,7 @@
 
 .candidate-name {
     padding-top: 15px;
-}
-
-.candidate-name:hover {
-    text-decoration: underline;
-    cursor: pointer;
+    font-family: "Inter", sans-serif;
 }
 
 #ballot-instructions {

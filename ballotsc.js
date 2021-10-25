@@ -398,8 +398,7 @@ function showList() {
     // down buttons
     const allLi = document.querySelectorAll('.candidate-li');
     for (let i = 0; i < allLi.length; i++) {
-        const cName = allLi[i].querySelector(".candidate-name");
-        cName.onclick = () => {
+        allLi[i].onclick = () => {
             deleteButtons.forEach(db => {
                 const upDown = allLi[i].querySelector(".up-down");
                 const section = allLi[i].querySelector('.candidate-data');
