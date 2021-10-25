@@ -196,12 +196,22 @@
     padding-left: 10px;
 }
 
+.candidate-data-review {
+    border: 1px solid #3272E9;
+}
+
 .candidate-li {
     display: flex;
     justify-content: space-evenly;
     cursor: pointer;
     width: 850px;
     color: #3A3A3A;
+}
+
+li.candidate-li-review::before {
+    background-color: #3272E9;
+    color: white;
+    border: 1px solid #3272E9;
 }
 
 
@@ -263,7 +273,7 @@ li.candidate-selected::before {
 
 .btn-name {
     font-weight: 500;
-    font-family: "Inter", sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 .party {
@@ -292,7 +302,7 @@ li.candidate-selected::before {
 
 .candidate-name {
     padding-top: 15px;
-    font-family: "Inter", sans-serif;
+    font-family: 'Inter', sans-serif;
     padding-top: 27px;
 }
 
@@ -406,15 +416,9 @@ li.candidate-selected::before {
 }
 
 .popupButton {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 22px 42px;
-
     position: absolute;
-    width: 140px;
-    height: 50px;
+    width: 192px;
+    height: 83px;
     left: 900px;
     top: 800px;
 
@@ -422,6 +426,9 @@ li.candidate-selected::before {
 
     background: #3272E9;
     border-radius: 16px;
+    font-size: 24px;
+    font-family: 'Inter', sans-serif;
+    color: white;
 }
 
 .popupBackButton {

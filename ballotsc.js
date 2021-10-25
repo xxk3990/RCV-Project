@@ -37,31 +37,14 @@ function loadHelpPopup() {
 function closeHelpPopup() {
     document.querySelector('#help-popup').classList.remove('active')
 }
-/*
-click anywhere to select candidate (DONE)
-candidate name position (left-aligned) (DONE)
-candidate name should not move (DONE)
-candidate name/dem weight difference (DONE), unable to do in list of five 
-help pop-up
-My Ballot box size should stay fixed (DONE)
-My ballot border radius and color
-My Ballot text alignment and content (DONE)
-My Ballot line separating text and candidates (DONE)
-My Ballot Need help? button on right side (DONE)
-Select a candidate text should be blue before selecting first candidate
-little check mark icon^
-submit and review same size (DONE)
-make sure all fonts are inter and correct weight (especially review page)
-make sure all colors are correct, anything black should be #3a3a3a 
 
-*/
 
 function togglePopup() {
     if (itemList.length > 0) {
         document.querySelector("#popup-1").classList.toggle("active");
         let list = "<ol id = 'candidate-list'>"
         for (let i = 0; i < itemList.length; i++) {
-            list += `<li class = 'candidate-li'><section class = 'candidate-data'><span class = 'candidate-name'>${itemList[i]}</span></section></li>
+            list += `<li class = 'candidate-li candidate-li-review'><section class = 'candidate-data candidate-data-review'><span class = 'candidate-name'>${itemList[i]}</span></section></li>
         `;
         }
         list += '</ol>'
