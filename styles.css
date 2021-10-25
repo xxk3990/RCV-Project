@@ -110,15 +110,10 @@
     cursor: pointer;
     border-radius: 20px;
     background-color: white;
-
     font-family: 'Inter', sans-serif;
+    font-weight: normal;
     font-size: 20px;
-    font-weight: 500;
-}
-
-.candidate-btn:focus {
-    background-color: #446CD1;
-    color: white;
+    border: 1px solid #3272E9
 }
 
 .close {
@@ -155,6 +150,9 @@
     float: right;
     border: 1px solid black;
     margin-right: 25px;
+}
+.ballot-instructions {
+    text-align: center;
 }
 
 .review {
@@ -239,7 +237,7 @@
     border: 1px solid black;
     border-radius: 50%;
     height: 50px;
-    width: 30px;
+    width: 40px;
     font-size: 32px;
     padding-left: 10px;
     padding-right: 10px;
@@ -447,21 +445,25 @@
     box-sizing: border-box;
     border-radius: 16px;
 }
+
 #review {
     margin-bottom: 30px;
-    display:flex;
+    display: flex;
     justify-content: flex-end;
 }
+
 .submit-btn {
     background-color: #3272E9;
     color: white;
 }
-/* body {
-    background-color: #13268b;
-    background-image: url("images/texture.png");
-} */
 
-
+.back-btn {
+    width: 144px;
+    height: 53px;
+    font-size: 20px;
+    border-radius: 16px;
+    cursor: pointer;
+}
 
 #ballot-start {
     display: flex;
@@ -499,26 +501,8 @@
     margin-top: 95px;
 }
 
-#back-button {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border: none;
-    background-color: white;
-
-    text-align: center;   
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
-    font-size: 40px;
-    color: #3a3a3a;
-    width: 150px;
-    height: 48px;
-    margin-left: 120px;
-    margin-top: 91px;
-}
-
 #back-button:hover {
-    background-color:grey;
+    background-color: grey;
 }
 
 #back-arrow {
@@ -533,7 +517,7 @@
     padding: 15px 32px;
     width: 258px;
     height: 112px;
-    text-align: center;   
+    text-align: center;
     background-color: #3272E9;
     color: white;
     border-radius: 15px;
@@ -651,3 +635,8 @@ b {
     font-size: 32px;
     font-weight: 400;
 }
+
+/* body {
+    background-color: #13268b;
+    background-image: url("images/texture.png");
+} */
