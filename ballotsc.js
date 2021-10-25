@@ -51,6 +51,9 @@ make sure all fonts are inter and correct weight (especially review page)
 make sure all colors are correct, anything black should be #3a3a3a 
 
 */
+function togglePopup1() {
+    document.querySelector("#help-popup").classList.toggle("active");
+}
 
 function togglePopup() {
     if (itemList.length > 0) {
