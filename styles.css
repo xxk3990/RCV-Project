@@ -294,7 +294,7 @@
 
 #ballot-title-img {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-evenly;
 }
 
 #ballot-help-icon {
@@ -303,6 +303,25 @@
     margin-top: 19px;
     padding-left: 5px;
 }
+
+#ballot-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.need-help-img {
+    width: 24px;
+    height: 24px;
+    margin-right: 7px;
+}
+
+
+.need-help {
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .spacer {
     width: 850px;
 }
@@ -507,7 +526,7 @@
 
 .postButton {
     width: 144px;
-    height: 63px;
+    height: 53px;
     /* Light Grey */
     font-size: 20px;
     border: 2px solid #D5DEED;

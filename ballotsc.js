@@ -43,10 +43,10 @@ My Ballot box size should stay fixed (DONE)
 My ballot border radius and color
 My Ballot text alignment and content (DONE)
 My Ballot line separating text and candidates (DONE)
-My Ballot Need help? button on right side
+My Ballot Need help? button on right side (DONE)
 Select a candidate text should be blue before selecting first candidate
 little check mark icon^
-submit and review same size
+submit and review same size (DONE)
 make sure all fonts are inter and correct weight (especially review page)
 make sure all colors are correct, anything black should be #3a3a3a 
 
