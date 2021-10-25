@@ -33,6 +33,10 @@ helpBtn.onclick = loadHelpPopup;
 function loadHelpPopup() {
     document.querySelector('#help-popup').classList.toggle('active')
 }
+
+function closeHelpPopup() {
+    document.querySelector('#help-popup').classList.remove('active')
+}
 /*
 click anywhere to select candidate (DONE)
 candidate name position (left-aligned) (DONE)
@@ -51,9 +55,6 @@ make sure all fonts are inter and correct weight (especially review page)
 make sure all colors are correct, anything black should be #3a3a3a 
 
 */
-function togglePopup1() {
-    document.querySelector("#help-popup").classList.toggle("active");
-}
 
 function togglePopup() {
     if (itemList.length > 0) {
@@ -78,6 +79,10 @@ function button1F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const blueInstructions = document.querySelector('.blue-instructions');
+            if(itemList.length > 0 && document.querySelector('.result').contains(blueInstructions)) {
+                blueInstructions.style.display = "none";
+            }
             const reviewBtn = document.querySelector(".postButton");
             reviewBtn.classList.add('submit-btn');
             itemList.push(item);
@@ -103,6 +108,10 @@ function button2F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const blueInstructions = document.querySelector('.blue-instructions');
+            if(itemList.length > 0 && document.querySelector('.result').contains(blueInstructions)) {
+                blueInstructions.style.display = "none";
+            }
             const reviewBtn = document.querySelector(".postButton");
             reviewBtn.classList.add('submit-btn');
             itemList.push(item);
@@ -126,6 +135,10 @@ function button3F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const blueInstructions = document.querySelector('.blue-instructions');
+            if(itemList.length > 0 && document.querySelector('.result').contains(blueInstructions)) {
+                blueInstructions.style.display = "none";
+            }
             const reviewBtn = document.querySelector(".postButton");
             reviewBtn.classList.add('submit-btn');
             itemList.push(item);
@@ -149,6 +162,10 @@ function button4F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const blueInstructions = document.querySelector('.blue-instructions');
+            if(itemList.length > 0 && document.querySelector('.result').contains(blueInstructions)) {
+                blueInstructions.style.display = "none";
+            }
             const reviewBtn = document.querySelector(".postButton");
             reviewBtn.classList.add('submit-btn');
             itemList.push(item);
@@ -172,6 +189,10 @@ function button5F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const blueInstructions = document.querySelector('.blue-instructions');
+            if(itemList.length > 0 && document.querySelector('.result').contains(blueInstructions)) {
+                blueInstructions.style.display = "none";
+            }
             const reviewBtn = document.querySelector(".postButton");
             reviewBtn.classList.add('submit-btn');
             itemList.push(item);
@@ -195,6 +216,10 @@ function button6F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const blueInstructions = document.querySelector('.blue-instructions');
+            if(itemList.length > 0 && document.querySelector('.result').contains(blueInstructions)) {
+                blueInstructions.style.display = "none";
+            }
             const reviewBtn = document.querySelector(".postButton");
             reviewBtn.classList.add('submit-btn');
             itemList.push(item);
@@ -218,6 +243,10 @@ function button7F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const blueInstructions = document.querySelector('.blue-instructions');
+            if(itemList.length > 0 && document.querySelector('.result').contains(blueInstructions)) {
+                blueInstructions.style.display = "none";
+            }
             const reviewBtn = document.querySelector(".postButton");
             reviewBtn.classList.add('submit-btn');
             itemList.push(item);
@@ -241,6 +270,10 @@ function button8F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const blueInstructions = document.querySelector('.blue-instructions');
+            if(itemList.length > 0 && document.querySelector('.result').contains(blueInstructions)) {
+                blueInstructions.style.display = "none";
+            }
             const reviewBtn = document.querySelector(".postButton");
             reviewBtn.classList.add('submit-btn');
             itemList.push(item);
@@ -264,6 +297,10 @@ function button9F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const blueInstructions = document.querySelector('.blue-instructions');
+            if(itemList.length > 0 && document.querySelector('.result').contains(blueInstructions)) {
+                blueInstructions.style.display = "none";
+            }
             const reviewBtn = document.querySelector(".postButton");
             reviewBtn.classList.add('submit-btn');
             itemList.push(item);
@@ -287,6 +324,10 @@ function button10F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const blueInstructions = document.querySelector('.blue-instructions');
+            if(itemList.length > 0 && document.querySelector('.result').contains(blueInstructions)) {
+                blueInstructions.style.display = "none";
+            }
             const reviewBtn = document.querySelector(".postButton");
             reviewBtn.classList.add('submit-btn');
             itemList.push(item);
@@ -310,6 +351,10 @@ function button11F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const blueInstructions = document.querySelector('.blue-instructions');
+            if(itemList.length > 0 && document.querySelector('.result').contains(blueInstructions)) {
+                blueInstructions.style.display = "none";
+            }
             const reviewBtn = document.querySelector(".postButton");
             reviewBtn.classList.add('submit-btn');
             itemList.push(item);
@@ -333,6 +378,10 @@ function button12F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const blueInstructions = document.querySelector('.blue-instructions');
+            if(itemList.length > 0 && document.querySelector('.result').contains(blueInstructions)) {
+                blueInstructions.style.display = "none";
+            }
             const reviewBtn = document.querySelector(".postButton");
             reviewBtn.classList.add('submit-btn');
             itemList.push(item);
@@ -356,6 +405,10 @@ function button13F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const blueInstructions = document.querySelector('.blue-instructions');
+            if(itemList.length > 0 && document.querySelector('.result').contains(blueInstructions)) {
+                blueInstructions.style.display = "none";
+            }
             itemList.push(item);
             this.style.backgroundColor = "#3272E9";
             this.style.color = "white";
@@ -377,6 +430,10 @@ function button14F() {
         if (itemList.length === 5) {
             return;
         } else {
+            const blueInstructions = document.querySelector('.blue-instructions');
+            if(itemList.length > 0 && document.querySelector('.result').contains(blueInstructions)) {
+                blueInstructions.style.display = "none";
+            }
             itemList.push(item);
             this.style.backgroundColor = "#3272E9";
             this.style.color = "white";
@@ -396,13 +453,26 @@ let id;
 function showList() {
     let list = "<ul id = 'candidate-list'>"
     for (let i = 0; i < itemList.length; i++) {
-        list += `<li class = 'candidate-li'><section class = 'candidate-data'><span class = 'candidate-name'>${itemList[i]}</span><span class='close' id='${i}'>&times;</span></section><section class = "up-down"><section class = "up-down-btns"><button type="button" class="upButton" value="up" id='${i}'>&#x25B2;</button>
-        <button type="button" class="downButton" value="down" id='${i}'">&#x25BC;</button></section></section></li>
+        list += `
+        <li class = 'candidate-li'>
+            <section class = 'candidate-data'>
+                <span class = 'candidate-name'>${itemList[i]}</span>
+                <section class = "candidate-controls">
+                    <span class='close' id='${i}'>&times;</span>
+                    <section class = "up-down">
+                        <section class = "up-down-btns">
+                            <button type="button" class="upButton" value="up" id='${i}'>&#x25B2;</button>
+                            <button type="button" class="downButton" value="down" id='${i}'">&#x25BC;</button>
+                        </section>  
+                    </section>
+                </section>
+            </section>
+        </li>
         `;
     }
     list += '</ul>'
     document.querySelector(".candidateList").innerHTML = list;
-    if(itemList.length === 5) {
+    if(itemList.length === 5 || itemList.length === 0) {
         const result = document.querySelector('.result');
         const instructions = result.querySelector('.ballot-instructions')
         instructions.style.display = "none";
@@ -414,7 +484,7 @@ function showList() {
     //  candidateList.appendChild(candidateLi);
     let deleteButtons = document.querySelectorAll(".close");
     for (let i = 0; i < deleteButtons.length; i++) {
-        const li = deleteButtons[i].parentElement;
+        const li = deleteButtons[i].parentElement.parentElement.parentElement;
         deleteButtons[i].onclick = () => {
             li.classList.add('delete-animation');
         }
@@ -507,7 +577,7 @@ function deleteItem(deleteBtn) {
 
     //console.log(buttonToDeselect.id);
     buttonToDeselect.style.backgroundColor = "white";
-    buttonToDeselect.style.color = "black";
+    buttonToDeselect.style.color = "#3A3A3A";
     itemList.splice(id, 1);
     console.log(itemList);
     const reviewBtn = document.querySelector(".postButton");

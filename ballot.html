@@ -42,19 +42,19 @@
         <section class="content">
             <section class="content-instructions">
                 <section id="help-1">
-                    <img id="candidate-illustration" src="images/5 Candidate Illustration.png">
+                    <img id="candidate-illustration" class="help-img" src="images/5 Candidate Illustration.png">
                     <p class="help-description">Rank up to 5 candidates from the list of candidates</p>
                 </section>
                 <section id="help-2">
-                    <img id="remove-illustration" src="images/Remove Illustration.png">
+                    <img id="remove-illustration" class="help-img" src="images/Remove Illustration.png">
                     <p class="help-description">Select “X” to remove a candidate from your ballot</p>
                 </section>
                 <section id="help-3">
-                    <img id="rank-illustration" src="images/Ranking Illustration.png">
+                    <img id="rank-illustration" class="help-img" src="images/Ranking Illustration.png">
                     <p class="help-description">Select candidate’s name in your ballot to use arrows to reorder</p>
                 </section>
             </section>
-            <button type="button" id="close-help-btn" onclick="togglePopup1()">Okay</button>
+            <button type="button" id="close-help-btn" onclick="closeHelpPopup()">Okay</button>
         </section>
     </div>
 
@@ -106,14 +106,17 @@
                 <h2 id="ballot-title">My Ballot</h2><img id="ballot-help-icon" src="images/How-it-Works-Grey.png"
                     alt="help icon">
             </section>
-            <span class = "need-help"><img class = "need-help-img" src = "images/Need Help.png">Need Help?</span>
+            <span class="need-help"><img class="need-help-img" src="images/Need Help.png">Need Help?</span>
         </section>
         <p id="ballot-instructions">Rank up to 5 candidates on your ballot. <br>
             Select candidate name to reorder rank using arrows.</p>
         <hr class="spacer">
         <section class="candidateList">
-            <section id = "blue-instructions">
-                <img class ="cs" src = "images/Select Candidates.png">
+            <section class="blue-instructions">
+                <section class="blue-instructions-flex">
+                    <img class="select-candidates" src="images/Select Candidates.png">
+                    <span class="blue-instructions-description">Select a candidate to begin ranking</span>
+                </section>
             </section>
         </section>
     </div>

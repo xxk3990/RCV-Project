@@ -120,7 +120,8 @@
     background-color: white;
     font-family: 'Inter', sans-serif;
     font-size: 20px;
-    border: 1px solid #3272E9
+    border: 1px solid #3272E9;
+    color: #3A3A3A;
 }
 
 .close {
@@ -161,12 +162,16 @@
     width: 900px;
     border-radius: 20px;
 }
+
 .ballot-instructions {
     text-align: center;
 }
 
 #ballot-instructions {
     text-align: left;
+    padding: 10px;
+    color: #3A3A3A;
+    font-family: 'Inter', sans-serif;
 }
 
 .review {
@@ -196,6 +201,7 @@
     justify-content: space-evenly;
     cursor: pointer;
     width: 850px;
+    color: #3A3A3A;
 }
 
 
@@ -204,7 +210,7 @@
     transition: all 0.6s ease-out;
 }
 
-.up-animation {
+/* .up-animation {
     transform: translateY(-100px);
     transition: all 0.6s ease-out;
     z-index: 1;
@@ -216,15 +222,19 @@
     transition: all 0.6s ease-out;
     z-index: 1;
     position: relative;
-}
+} */
 
 .selected {
     background-color: #3272E9;
     color: white;
-    width: 700px;
 }
 
-.candidate-selected::before {
+.candidate-controls {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+li.candidate-selected::before {
     color: white;
     background: #3272E9;
     border: 1px solid #3272E9;
@@ -237,7 +247,7 @@
 
 .close-white {
     color: white;
-    margin-right: 30px;
+    margin-left: 30px;
 }
 
 #candidate-list {
@@ -255,9 +265,11 @@
     font-weight: 500;
     font-family: "Inter", sans-serif;
 }
+
 .party {
     font-style: normal;
     font-family: 'Inter', sans-serif;
+    
 }
 
 .candidate-li::before {
@@ -274,6 +286,7 @@
     text-align: center;
     margin-top: 10px;
     padding-top: 7px;
+    color: #3A3A3A;
 }
 
 
@@ -283,13 +296,10 @@
     padding-top: 27px;
 }
 
-#ballot-instructions {
-    padding: 10px;
-}
-
 #ballot-title {
     text-align: left;
     padding-left: 10px;
+    color: #3A3A3A;
 }
 
 #ballot-title-img {
@@ -302,6 +312,7 @@
     height: 24px;
     margin-top: 19px;
     padding-left: 5px;
+    cursor: pointer;
 }
 
 #ballot-header {
@@ -320,6 +331,7 @@
     padding: 10px;
     display: flex;
     justify-content: space-evenly;
+    color: #3A3A3A;
 }
 
 .spacer {
@@ -343,6 +355,7 @@
 
     background: #3272E9;
     border-radius: 16px;
+    color: #3A3A3A;
 }
 
 .popupReview {
@@ -427,6 +440,7 @@
     background: #DFE2E6;
     border-radius: 16px;
 }
+
 .popup.active .overlay {
     display: block;
 }
@@ -720,7 +734,7 @@ b {
     margin-top: 91px;
 }
 
-.help-popup .overlay{
+.help-popup .overlay {
     position: fixed;
     top: 0px;
     left: 0px;
@@ -729,8 +743,9 @@ b {
     background: rgba(59, 56, 56, .95);
     z-index: 1;
     display: none;
-  }
-  .help-popup .content {
+}
+
+.help-popup .content {
     border-radius: 20px;
     position: absolute;
     top: 50%;
@@ -743,9 +758,20 @@ b {
     text-align: center;
     padding: 20px;
     box-sizing: border-box;
-  }
-  
-  .help-popup .close-btn {
+}
+
+.content-instructions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    margin-top: 100px;
+}
+.help-img {
+    width: 224px;
+    height: 224px;
+}
+
+/* .help-popup .close-btn {
     position: absolute;
     right: 10px;
     top: 10px;
@@ -758,13 +784,50 @@ b {
     line-height: 25px;
     text-align: center;
     border-radius: 50%;
-  }
-  
-  .help-popup.active .overlay {
+} */
+
+.help-popup.active .overlay {
     display: block;
-  }
-  
-  .help-popup.active .content {
+}
+
+.help-popup.active .content {
     transition: all 300ms ease-in-out;
     transform: translate(-50%, -50%) scale(1);
-  }
+}
+
+#close-help-btn {
+    width: 163px;
+    height: 73px;
+    background-color: #3272E9;
+    font-size: 32px;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    border-radius: 16px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.help-description {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    color: #3A3A3A;
+}
+
+.blue-instructions-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.select-candidates {
+    width: 78px;
+    height: 62px;
+}
+
+.blue-instructions-description {
+    color: #3272E9;
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+}
