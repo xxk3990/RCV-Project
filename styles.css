@@ -169,7 +169,7 @@
 
 #ballot-instructions {
     text-align: left;
-    padding: 10px;
+    padding: 20px;
     color: #3A3A3A;
     font-family: 'Inter', sans-serif;
 }
@@ -216,8 +216,8 @@ li.candidate-li-review::before {
 
 
 .delete-animation {
-    transform: translateX(900px);
-    transition: all 0.6s ease-out;
+    opacity: 0;
+    transition: all 0.12s ease-out;
 }
 
 /* .up-animation {
@@ -308,7 +308,7 @@ li.candidate-selected::before {
 
 #ballot-title {
     text-align: left;
-    padding-left: 10px;
+    padding-left: 20px;
     color: #3A3A3A;
 }
 
