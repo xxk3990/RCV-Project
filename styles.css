@@ -446,6 +446,7 @@ li.candidate-selected::before {
 
     background: #DFE2E6;
     border-radius: 16px;
+    border: none;
 }
 
 .popup.active .overlay {
@@ -612,6 +613,7 @@ li.candidate-selected::before {
     font-size: 40px;
     left: 120px;
     top: 620px;
+    cursor: pointer;
 }
 
 #start-button:active {
