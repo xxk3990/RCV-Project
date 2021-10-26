@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ballot Start Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body id="ballot-start">
+    <div id="left">
+            <button id="back-button" class="back-btn" onclick="window.location.href = 'language.html'">
+                <img id="back-arrow" src="images/Back Arrow.png">
+                Back
+            </button>
+        <div id="start-h1">
+            <h1 id="black-h1" class="start-h1">NYC Democratic</h1>
+            <h1 id="blue-h1" class="start-h1">Primary Election</h1>
+        </div>
+        <a href="ballot.html"><button id="start-button">Start</button></a>
+    </div>
+    <div id="right">
+        <img id="ballot-doodle" src="images/Ballot Illustration.png">
+        <h2 id="bold-h2">How the digital ballot works</h2>
+        <ul id="instructions-div">
+            <li class="instructions">Rank up to 5 candidates on your ballot</p>
+            <li class="instructions">Select candidate name to reorder rank <br>using up and down arrows</p>
+            <li class="instructions">Review your ballot then submit your votes</p>
+        </ul>
+    </div>
+    <button id="help-button">?</button>
+</body>
+
+</html>
