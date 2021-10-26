@@ -464,6 +464,20 @@ function showList() {
         const instructions = result.querySelector('.ballot-instructions')
         instructions.style.display = "block"
     }
+    const candidateButtonList = document.querySelector(".candidateButtons");
+    const candidateButtons = candidateButtonList.querySelectorAll('.candidate-btn');
+    if(itemList.length === 5) {
+       
+        for(let cb of candidateButtons) {
+            cb.style.border = '1px solid #D5DEED';
+            cb.style.cursor = "default";
+        }
+    } else {
+        for(let cb of candidateButtons) {
+            cb.style.border = '1px solid #3272E9';
+            cb.style.cursor = 'pointer';
+        }
+    }
     //  candidateList.appendChild(candidateLi);
     let deleteButtons = document.querySelectorAll(".close");
     for (let i = 0; i < deleteButtons.length; i++) {
@@ -494,6 +508,7 @@ function showList() {
                     const otherSections = oc.querySelector('.candidate-data')
                     const otherArrows = oc.querySelector('.up-down');
                     const otherDeletes = oc.querySelector('.close');
+                    otherSections.style.border = "1px solid #D5DEED";
                     if(oc.classList.contains('candidate-selected')) {
                         oc.classList.remove('candidate-selected');
                     }
