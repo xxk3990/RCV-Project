@@ -657,12 +657,8 @@ function downButton(downBtn) {
     let f = itemList.splice(parseId, 1)[0];
     if (parseId <= itemList.length) {
         const candidateButtons = document.querySelector(".candidateButtons");
-        const buttonToDeselect = candidateButtons.querySelector(`#b-${id}`);
-        //console.log(f);
         itemList.splice(parseId + 1, 0, f);
         downBtn.id = parseId + 1;
-        //   buttonToDeselect.removeAttribute('id');
-        // buttonToDeselect.setAttribute('id', `b-${parseId + 1}`);
         if(parseId == 0){
             const btda = candidateButtons.querySelector(`#b-${1}`);
             const btdb = candidateButtons.querySelector(`#b-${0}`);
