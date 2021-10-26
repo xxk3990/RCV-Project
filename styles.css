@@ -548,6 +548,7 @@ li.candidate-selected::before {
     font-size: 20px;
     border-radius: 16px;
     cursor: pointer;
+    border: none;
 }
 
 #ballot-start {
