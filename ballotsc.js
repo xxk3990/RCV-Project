@@ -570,8 +570,6 @@ function deleteItem(deleteBtn) {
     }
     showList();
     buttonToDeselect.removeAttribute('id');
-    // const buttonToDeselect2 = candidateButtons.querySelector(`#b-${parseId+1}`);
-    // buttonToDeselect2.setAttribute('id', `b-${parseId}`);
 
     if(parseId == 0){
         const btd1 = candidateButtons.querySelector(`#b-${1}`);
@@ -617,12 +615,8 @@ function upButton(upBtn) {
     let f = itemList.splice(parseId, 1)[0];
     if (parseId <= itemList.length) {
         const candidateButtons = document.querySelector(".candidateButtons");
-        const buttonToDeselect = candidateButtons.querySelector(`#b-${id}`);
-        //console.log(f);
         itemList.splice(parseId - 1, 0, f);
         upBtn.id = parseId - 1;
-        // buttonToDeselect.removeAttribute('id');
-        // buttonToDeselect.setAttribute('id', `b-${parseId - 1}`);
         if(parseId == 1){
             const btda = candidateButtons.querySelector(`#b-${0}`);
             const btdb = candidateButtons.querySelector(`#b-${1}`);
